@@ -1,0 +1,26 @@
+.inactiveTab {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.activeTab {
+  height: 45px;
+  color: #032b44;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.activeTab::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background-color: #032b44;
+  border-radius: 50%;
+}

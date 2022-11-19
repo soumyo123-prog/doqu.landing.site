@@ -1,0 +1,13 @@
+version: 0.2
+env:
+  parameter-store:
+    REACT_APP_CLOUDFRONT_ID: "REACT-APP-EINMIND-DOCS-CLOUDFRONT-ID"
+phases:
+  pre_build:
+    commands:
+      - aws --version
+  build:
+    commands:
+    - echo Build started on `date`
+    - echo Invalidating cloud front cache on `date`
+    - aws cloudfront create-invalidation --distribution-id ${REACT_APP_CLOUDFRONT_ID} --paths "/*"
