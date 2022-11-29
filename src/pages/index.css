@@ -4,3 +4,351 @@
   font-family: "Sarabun", sans-serif;
   scroll-behavior: smooth;
 }
+
+body {
+  background-color: white;
+}
+
+.nav-menu-full {
+  display: flex;
+  list-style: "none";
+  justify-content: "space-evenly";
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+}
+
+.nav-menu-small {
+  display: none;
+}
+
+.doqu-logo-nav {
+  display: block;
+}
+
+.doqu-text-nav {
+  display: none;
+}
+
+.features-nav {
+  display: flex;
+}
+
+.nav-bar {
+  background-color: white;
+}
+
+.header-main-title {
+  font-size: 50px;
+}
+
+.header-main-caption {
+  font-size: 13px;
+}
+
+.subheader-section {
+}
+
+.subheader-title br:nth-child(1),
+.subheader-title br:nth-child(2) {
+  display: none;
+}
+
+.subheader-title {
+  font-size: 30px;
+}
+
+.subheader-caption {
+  font-size: 13px;
+}
+
+.features-section {
+  display: flex;
+  align-items: center;
+  min-height: 200px;
+  width: 100%;
+  padding: 40px 0px;
+  box-sizing: border-box;
+  text-align: left;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.features-section div img {
+  max-width: min(450px, 100%) !important;
+}
+
+.red-square {
+  display: flex;
+  align-items: center;
+}
+
+.usecases-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  color: #032b44;
+}
+
+.gettingstarted-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 20px;
+}
+
+.features-section-text {
+  padding: 0px 45px;
+}
+
+.supports-card {
+  grid-template-columns: auto auto auto;
+}
+
+.supports-card > div {
+  display: flex !important;
+  margin: 0 !important;
+  color: #438f9d;
+  align-items: center;
+  text-align: left;
+  width: 90px;
+  border: 1px solid #438f9d;
+  border-radius: 2px;
+  padding: 8px 10px;
+  box-sizing: border-box;
+}
+
+.supports-card > div > div {
+  margin: 0 !important;
+}
+
+.schedule-demo-text {
+  width: 70%;
+}
+
+.readdocs-text {
+  width: 80%;
+}
+
+.footer-main-gap {
+  width: 0px;
+}
+
+@media screen and (max-width: 740px) {
+  .features-section {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .features-section > div {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .features-section > div > div {
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  .red-square {
+    display: none;
+  }
+
+  .usecases-grid {
+    grid-template-columns: auto auto;
+  }
+
+  .readdocs-bg {
+    display: none;
+  }
+
+  .schedule-demo-text {
+    width: 90%;
+  }
+
+  .readdocs-text {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .nav-menu-full {
+    display: none;
+  }
+
+  .nav-menu-small {
+    display: block;
+  }
+
+  .nav-bar {
+    background-color: #032b44;
+  }
+
+  .doqu-logo-nav {
+    display: none;
+  }
+
+  .doqu-text-nav {
+    display: block;
+  }
+
+  .features-nav {
+    display: none;
+  }
+
+  .header-main-title {
+    font-size: 42px;
+  }
+
+  .header-main-caption {
+    font-size: 20px;
+    width: 60%;
+  }
+
+  .header-main-caption br {
+    display: none;
+  }
+
+  .usecases-grid {
+    grid-template-columns: auto;
+  }
+
+  .gettingstarted-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  .gettingstarted-grid > div {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    text-align: center;
+  }
+
+  .gettingstarted-grid > div > div {
+    margin: auto;
+  }
+
+  .features-section-text {
+    max-width: 100vw;
+  }
+
+  .supports-card {
+    display: flex !important;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .supports-card > div {
+    width: 100px !important;
+  }
+
+  .schedule-demo-text {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .readdocs-text {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .subheader-section {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .subheader-title {
+    font-size: 30px;
+    line-height: 40px !important;
+  }
+
+  .subheader-title br:nth-child(1),
+  .subheader-title br:nth-child(2) {
+    display: block;
+  }
+
+  .subheader-caption {
+    font-size: 17px;
+    font-weight: 300 !important;
+  }
+
+  .subheader-caption br {
+    display: none;
+  }
+
+  .subheader-bg {
+    filter: blur(20px);
+  }
+
+  .features-section-text > div:nth-child(1) {
+    font-size: 34px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .features-section-text > div:nth-child(3) {
+    font-size: 15px !important;
+  }
+
+  .features-section-text > p {
+    font-size: 17px !important;
+    font-weight: 500;
+    padding-bottom: 20px !important;
+  }
+
+  .gettingstarted-title {
+    text-align: center;
+    font-size: 36px !important;
+  }
+
+  .usecases {
+    text-align: center;
+  }
+
+  .usecases > h2 {
+    font-size: 36px !important;
+  }
+
+  .usecases > p {
+    font-size: 18px !important;
+  }
+
+  .usecases-grid {
+    font-size: 18px !important;
+  }
+
+  .footer-main {
+    flex-direction: column;
+    font-size: 20px !important;
+    gap: 30px;
+  }
+
+  .footer-main > div:nth-child(1) {
+    justify-content: space-between !important;
+    width: 100%;
+  }
+
+  .footer-main-gap {
+    width: 0px;
+  }
+
+  .footer-foot > div {
+    display: none;
+  }
+
+  .footer-foot {
+    font-size: 20px !important;
+    border-top: 1px solid white;
+    padding-top: 30px !important;
+    flex-direction: column !important;
+    gap: 20px;
+  }
+}

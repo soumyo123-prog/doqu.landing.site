@@ -5,8 +5,9 @@ import readDocs from "../../../static/img/readDocs.png";
 
 const GettingStared = () => {
   return (
-    <div style={{ padding: "80px 40px", backgroundColor: "white" }}>
+    <div style={{ padding: "80px 40px" }}>
       <h2
+        className="gettingstarted-title"
         style={{
           fontSize: "25px",
           textShadow: "0px 2px 2px rgba(0, 0, 0, 0.25)",
@@ -17,13 +18,7 @@ const GettingStared = () => {
         Getting Started <span style={{ color: "#D00000" }}>Is Easy</span>
       </h2>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "auto auto auto",
-          columnGap: "20px",
-        }}
-      >
+      <div className="gettingstarted-grid">
         <div
           style={{
             background: "linear-gradient(180deg, #032B44 0%, #2E4756 100%)",
@@ -35,11 +30,9 @@ const GettingStared = () => {
           }}
         >
           <p style={{ fontSize: "20px", fontWeight: 600 }}>Schedule a Demo</p>
-          <p>
-            Structure, automate, and qualify your
-            <br /> training data efforts. Get started now
-            <br /> for free, immediate access, no credit
-            <br /> card required.
+          <p className="schedule-demo-text">
+            Structure, automate, and qualify your training data efforts. Get
+            started now for free, immediate access, no credit card required.
           </p>
 
           <div
@@ -69,16 +62,15 @@ const GettingStared = () => {
           }}
         >
           <p style={{ fontSize: "20px", fontWeight: 600 }}>Read Docs</p>
-          <p>
-            Explore and get
-            <br /> comfortable with the
-            <br /> important components
-            <br /> of the platform
+          <p className="readdocs-text">
+            Explore and get comfortable with the important components of the
+            platform
           </p>
 
           <img src={arrowRight} style={{ height: "40px", cursor: "pointer" }} />
 
           <img
+            className="readdocs-bg"
             src={readDocs}
             style={{ position: "absolute", right: 0, bottom: 0 }}
           />

@@ -17,8 +17,8 @@ const MainSection = () => {
         }}
       >
         <p
+          className="header-main-title"
           style={{
-            fontSize: "50px",
             fontWeight: 700,
             lineHeight: "60px",
             padding: 0,
@@ -30,7 +30,7 @@ const MainSection = () => {
           <br />
           <span style={{ color: "#438F9D" }}>AI</span> Predictions
         </p>
-        <p style={{ fontSize: "13px", fontWeight: 500 }}>
+        <p className="header-main-caption" style={{ fontWeight: 500 }}>
           Teams building machine learning pipelines use <br />
           DoQu to visualise, verify and correct extractions.
         </p>
@@ -42,13 +42,13 @@ const MainSection = () => {
           height="500"
           viewBox="0 0 500 220"
           preserveAspectRatio="none"
+          className="subheader-bg"
           style={{
             width: "100%",
             position: "relative",
             left: 0,
             top: 0,
             transform: "translateY(7px)",
-            // backgroundImage: `url(${ecoBg})`,
           }}
         >
           <defs>
@@ -63,7 +63,7 @@ const MainSection = () => {
           </defs>
 
           <path
-            d="M0,0 L0,600 L500,600 L500,0 Q250,120 0,0 Z"
+            d="M0,0 L0,600 L500,600 L500,0 Q250,60 0,0 Z"
             fill="url(#img1)"
           />
         </svg>
@@ -82,12 +82,13 @@ const MainSection = () => {
           }}
         >
           <path
-            d="M0,0 L0,600 L500,600 L500,0 Q250,120 0,0 Z"
+            d="M0,0 L0,600 L500,600 L500,0 Q250,60 0,0 Z"
             fill="rgba(3, 43, 68, 0.8)"
           />
         </svg>
 
         <div
+          className="subheader-section"
           style={{
             textAlign: "center",
             minHeight: "400px",
@@ -104,8 +105,8 @@ const MainSection = () => {
           }}
         >
           <p
+            className="subheader-title"
             style={{
-              fontSize: "30px",
               fontWeight: 700,
               lineHeight: "30px",
               padding: 0,
@@ -114,12 +115,17 @@ const MainSection = () => {
               color: "white",
             }}
           >
-            One Platform, For Your
+            One Platform,
+            <br /> For Your
+            <br />
             <span style={{ color: "#438F9D" }}> Entire</span>
             <br />
             <span style={{ color: "#438F9D" }}>AI Ecosystem</span>
           </p>
-          <p style={{ fontSize: "13px", fontWeight: 500, color: "white" }}>
+          <p
+            className="subheader-caption"
+            style={{ fontWeight: 500, color: "white" }}
+          >
             The most complete platform for unlocking the potential of
             <br />
             teams that build AI powered data extraction pipelines
