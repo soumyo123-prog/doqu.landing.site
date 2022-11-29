@@ -19,6 +19,7 @@ const Footer = () => {
       }}
     >
       <div
+        className="footer-main"
         style={{
           display: "flex",
           justifyContent: "space-between",
@@ -30,7 +31,7 @@ const Footer = () => {
             <p style={{ color: "#438F9D" }}>Company</p>
             <p>Contact Us</p>
           </div>
-          <div style={{ width: "100px" }}></div>
+          <div className="footer-main-gap"></div>
           <div>
             <p style={{ color: "#438F9D" }}>Resources</p>
             <p>Docs</p>
@@ -42,6 +43,7 @@ const Footer = () => {
       </div>
 
       <div
+        className="footer-foot"
         style={{
           display: "flex",
           justifyContent: "flex-end",

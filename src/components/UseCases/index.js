@@ -42,6 +42,7 @@ const UseCaseCard = ({ label, img }) => {
 const UseCases = () => {
   return (
     <div
+      className="usecases"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundPosition: "center",
@@ -56,13 +57,7 @@ const UseCases = () => {
         DoQu apps support building various data extraction pipelines
       </p>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "auto auto auto",
-          color: "#032B44",
-        }}
-      >
+      <div className="usecases-grid">
         <UseCaseCard label="Specific Datapoint" img={useC1} />
         <UseCaseCard label="Dataset" img={useC2} />
         <UseCaseCard label="Classify" img={useC3} />

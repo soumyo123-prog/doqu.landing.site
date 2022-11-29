@@ -6,6 +6,8 @@ import img3 from "../../../static/img/3 1.png";
 import img4 from "../../../static/img/4 1.png";
 
 import pdf from "../../../static/vectors/pdf.png";
+import imag1 from "../../../static/vectors/img1.png";
+import imag2 from "../../../static/vectors/img2.png";
 import audio from "../../../static/vectors/audio.png";
 import word from "../../../static/vectors/word.png";
 import excel from "../../../static/vectors/excel.png";
@@ -58,14 +60,14 @@ const Features = () => {
   }, []);
 
   return (
-    <div style={{ textAlign: "center",  backgroundColor: "white",}}>
+    <div style={{ textAlign: "center" }}>
       <div
+        className="features-nav"
         style={{
           position: "sticky",
           zIndex: 999,
           top: "63px",
           height: "45px",
-          display: "flex",
           justifyContent: "center",
           alignItems: "center",
           border: "1px solid #D5D1D1",
@@ -133,18 +135,8 @@ const Features = () => {
         </ul>
       </div>
 
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          minHeight: "200px",
-          width: "100%",
-          padding: "40px 0px",
-          boxSizing: "border-box",
-          textAlign: "left",
-        }}
-      >
-        <div style={{ flex: 1, padding: "0px 45px" }} ref={ref1}>
+      <div className="features-section">
+        <div className="features-section-text" style={{ flex: 1 }} ref={ref1}>
           <div
             style={{
               fontSize: "25px",
@@ -154,16 +146,14 @@ const Features = () => {
               marginBottom: "10px",
             }}
           >
-            App Builder&nbsp;&nbsp; <RedSquare />
+            App Builder
+            <div className="red-square">
+              &nbsp;&nbsp; <RedSquare />
+            </div>
           </div>
           <p style={{ lineHeight: "24px" }}>
-            Create data processing apps with no code in
-            <br />
-            minutes. Define input and expected output
-            <br />
-            types. Start uploading data for data
-            <br />
-            extraction
+            Create data processing apps with no code in minutes. Define input
+            and expected output types. Start uploading data for data extraction
           </p>
 
           <div
@@ -173,31 +163,21 @@ const Features = () => {
               padding: "18px",
               fontSize: "12px",
               color: "#776F6F",
-              width: "400px",
+              maxWidth: "400px",
             }}
           >
             DoQu AI Supports
             <div
+              className="supports-card"
               style={{
                 display: "grid",
-                gridTemplateColumns: "auto auto auto",
                 rowGap: "20px",
+                columnGap: "20px",
                 marginTop: "10px",
+                textAlign: "left",
               }}
             >
-              <div
-                style={{
-                  display: "flex",
-                  color: "#438F9D",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  width: "90px",
-                  border: "1px solid #438F9D",
-                  borderRadius: "2px",
-                  padding: "8px 10px",
-                  boxSizing: "border-box",
-                }}
-              >
+              <div>
                 <img
                   src={pdf}
                   style={{
@@ -209,42 +189,41 @@ const Features = () => {
                 />
                 <div>PDF File</div>
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  color: "#438F9D",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  width: "90px",
-                  border: "1px solid #438F9D",
-                  borderRadius: "2px",
-                  padding: "8px 10px",
-                  boxSizing: "border-box",
-                }}
-              >
-                <img
-                  src={pdf}
+              <div>
+                <div
                   style={{
                     height: "16px",
                     width: "20px",
-                    objectFit: "contain",
-                    objectPosition: "left",
+                    position: "relative",
                   }}
-                />
-                <div>PDF File</div>
+                >
+                  <img
+                    src={imag1}
+                    style={{
+                      height: "16px",
+                      width: "20px",
+                      objectFit: "contain",
+                      objectPosition: "left",
+                    }}
+                  />
+
+                  <img
+                    src={imag2}
+                    style={{
+                      height: "10px",
+                      width: "16px",
+                      objectFit: "contain",
+                      objectPosition: "left",
+                      position: "absolute",
+                      left: 5,
+                      top: 4,
+                    }}
+                  />
+                </div>
+
+                <div>Images</div>
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  color: "#438F9D",
-                  alignItems: "center",
-                  width: "90px",
-                  border: "1px solid #438F9D",
-                  borderRadius: "2px",
-                  padding: "8px 10px",
-                  boxSizing: "border-box",
-                }}
-              >
+              <div>
                 <img
                   src={audio}
                   style={{
@@ -256,19 +235,7 @@ const Features = () => {
                 />
                 <div>Audio</div>
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  color: "#438F9D",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  width: "90px",
-                  border: "1px solid #438F9D",
-                  borderRadius: "2px",
-                  padding: "8px 10px",
-                  boxSizing: "border-box",
-                }}
-              >
+              <div>
                 <img
                   src={word}
                   style={{
@@ -280,19 +247,7 @@ const Features = () => {
                 />
                 <div>MS Word</div>
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  color: "#438F9D",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  width: "90px",
-                  border: "1px solid #438F9D",
-                  borderRadius: "2px",
-                  padding: "8px 10px",
-                  boxSizing: "border-box",
-                }}
-              >
+              <div>
                 <img
                   src={excel}
                   style={{
@@ -318,25 +273,10 @@ const Features = () => {
       </div>
 
       <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          minHeight: "200px",
-          width: "100%",
-          padding: "40px 0px",
-          boxSizing: "border-box",
-          textAlign: "left",
-        }}
+        className="features-section"
+        style={{ flexDirection: "row-reverse" }}
       >
-        <div style={{ flex: 1, justifyContent: "center", display: "flex" }}>
-          <img
-            src={img2}
-            style={{
-              padding: "40px",
-            }}
-          />
-        </div>
-        <div style={{ flex: 1, padding: "0px 45px" }} ref={ref2}>
+        <div className="features-section-text" style={{ flex: 1 }} ref={ref2}>
           <div
             style={{
               fontSize: "25px",
@@ -346,13 +286,15 @@ const Features = () => {
               marginBottom: "10px",
             }}
           >
-            AI Integration&nbsp;&nbsp; <RedSquare />
+            AI Integration
+            <div className="red-square">
+              &nbsp;&nbsp; <RedSquare />
+            </div>
           </div>
           <p style={{ lineHeight: "24px" }}>
-            Connect directly from Jupyter Notebooks to DoQu
-            <br /> server with DoQu SDK and start parsing the inputs.
-            <br /> Upload the predictions back to server for manual
-            <br /> verification.
+            Connect directly from Jupyter Notebooks to DoQu server with DoQu SDK
+            and start parsing the inputs. Upload the predictions back to server
+            for manual verification.
           </p>
 
           <div
@@ -362,7 +304,7 @@ const Features = () => {
               padding: "5px 12px",
               fontSize: "14px",
               color: "#776F6F",
-              width: "300px",
+              width: "min(300px, 100%)",
             }}
           >
             Install doqu SDK using pip:
@@ -374,6 +316,7 @@ const Features = () => {
                 margin: "5px 0px",
                 color: "#032B44",
                 fontWeight: 500,
+                textAlign: "left",
               }}
             >
               pip install doqu
@@ -390,20 +333,18 @@ const Features = () => {
             </div>
           </div>
         </div>
+        <div style={{ flex: 1, justifyContent: "center", display: "flex" }}>
+          <img
+            src={img2}
+            style={{
+              padding: "40px",
+            }}
+          />
+        </div>
       </div>
 
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          minHeight: "200px",
-          width: "100%",
-          padding: "40px 0px",
-          boxSizing: "border-box",
-          textAlign: "left",
-        }}
-      >
-        <div style={{ flex: 1, padding: "0px 45px" }} ref={ref3}>
+      <div className="features-section">
+        <div className="features-section-text" style={{ flex: 1 }} ref={ref3}>
           <div
             style={{
               fontSize: "25px",
@@ -413,13 +354,15 @@ const Features = () => {
               marginBottom: "10px",
             }}
           >
-            Quantity&nbsp;&nbsp; <RedSquare />
+            Quantity
+            <div className="red-square">
+              &nbsp;&nbsp; <RedSquare />
+            </div>
           </div>
           <p style={{ lineHeight: "24px" }}>
-            Powerful and rich DoQu UI allows 100% <br />
-            accuracy. Monitor each task, manually verify
-            <br /> and correct data outputs and approve outputs
-            <br /> for further processing.
+            Powerful and rich DoQu UI allows 100% accuracy. Monitor each task,
+            manually verify and correct data outputs and approve outputs for
+            further processing.
           </p>
 
           <div
@@ -457,25 +400,10 @@ const Features = () => {
       </div>
 
       <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          minHeight: "200px",
-          width: "100%",
-          padding: "40px 0px",
-          boxSizing: "border-box",
-          textAlign: "left",
-        }}
+        className="features-section"
+        style={{ flexDirection: "row-reverse" }}
       >
-        <div style={{ flex: 1, justifyContent: "center", display: "flex" }}>
-          <img
-            src={img4}
-            style={{
-              padding: "40px",
-            }}
-          />
-        </div>
-        <div style={{ flex: 1, padding: "0px 45px" }} ref={ref4}>
+        <div className="features-section-text" style={{ flex: 1 }} ref={ref4}>
           <div
             style={{
               fontSize: "25px",
@@ -485,14 +413,16 @@ const Features = () => {
               marginBottom: "10px",
             }}
           >
-            Continuous Learning&nbsp;&nbsp; <RedSquare />
+            Continuous Learning
+            <div className="red-square">
+              &nbsp;&nbsp; <RedSquare />
+            </div>
           </div>
           <p style={{ lineHeight: "24px" }}>
-            Rich SDK allows to retrieve high quality manually
-            <br />
-            verified annotations from the DoQu server. Use these
-            <br /> data to further improve the automation logic and so
-            <br /> next time you spend less time on manual processes.
+            Rich SDK allows to retrieve high quality manually verified
+            annotations from the DoQu server. Use these data to further improve
+            the automation logic and so next time you spend less time on manual
+            processes.
           </p>
 
           <div
@@ -502,7 +432,7 @@ const Features = () => {
               padding: "5px 12px",
               fontSize: "14px",
               color: "#776F6F",
-              width: "300px",
+              width: "min(300px, 100%)",
             }}
           >
             Retrieve manually created annotations:
@@ -514,6 +444,7 @@ const Features = () => {
                 margin: "5px 0px",
                 color: "#032B44",
                 fontWeight: 500,
+                textAlign: "left",
               }}
             >
               doqu.get_annotations(task)
@@ -529,6 +460,14 @@ const Features = () => {
               ></div>
             </div>
           </div>
+        </div>
+        <div style={{ flex: 1, justifyContent: "center", display: "flex" }}>
+          <img
+            src={img4}
+            style={{
+              padding: "40px",
+            }}
+          />
         </div>
       </div>
     </div>

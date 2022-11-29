@@ -26,7 +26,7 @@ export default {
       "classic",
       {
         "docs": {
-          "sidebarPath": "/Users/duishoev/Documents/workspace/doqu/landing/sidebars.js",
+          "sidebarPath": "D:\\classforma\\doqu.landing.site\\sidebars.js",
           "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
         },
         "blog": {
@@ -34,7 +34,7 @@ export default {
           "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
         },
         "theme": {
-          "customCss": "/Users/duishoev/Documents/workspace/doqu/landing/src/css/custom.css"
+          "customCss": "D:\\classforma\\doqu.landing.site\\src\\css\\custom.css"
         }
       }
     ]
