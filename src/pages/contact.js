@@ -13,6 +13,7 @@ export default function Contact() {
   return (
     <div>
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScFOHIJbQCYpA06fvuVgiCIjSnpthFSeNVWR1aTokWTk3Le4w/viewform?embedded=true" width="640" height="812" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      
     </div>
   );
 }
