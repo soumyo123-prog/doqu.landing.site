@@ -48,6 +48,9 @@ const GettingStared = () => {
               fontWeight: 600,
               cursor: "pointer",
             }}
+            onClick={() => {
+              window.location.href = "/contact";
+            }}
           >
             Schedule
           </div>
@@ -67,7 +70,13 @@ const GettingStared = () => {
             platform
           </p>
 
-          <img src={arrowRight} style={{ height: "40px", cursor: "pointer" }} />
+          <img
+            src={arrowRight}
+            onClick={() => {
+              window.location.href = "/docs/intro";
+            }}
+            style={{ height: "40px", cursor: "pointer" }}
+          />
 
           <img
             className="readdocs-bg"
