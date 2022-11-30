@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import menuIcon from "../../../static/img/menu-icon.png";
 import doqu from "../../../static/img/doqu.png";
 import doquText from "../../../static/img/doqu-text.png";
 
-const navItems = [{ name: "Contact" }, { name: "Docs" }, { name: "Blog" }];
+const navItems = [
+  { name: "Contact", link: "/contact" },
+  { name: "Docs", link: "/docs/intro" },
+  { name: "Blog", link: "/blog" },
+];
 
 const navMenuStyle = {
   height: "63px",
@@ -19,6 +23,28 @@ const navMenuStyle = {
 };
 
 const NavBar = () => {
+  const [openNav, setOpenNav] = useState(false);
+
+  const smallNavRef = useRef(null);
+
+  const detectClickAway = (event) => {
+    if (
+      smallNavRef &&
+      smallNavRef.current &&
+      !smallNavRef.current.contains(event.target)
+    ) {
+      setOpenNav(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", detectClickAway);
+
+    return () => {
+      document.removeEventListener("click", detectClickAway);
+    };
+  }, []);
+
   return (
     <div style={navMenuStyle} className="nav-bar">
       <div
@@ -31,12 +57,18 @@ const NavBar = () => {
         <img
           src={doqu}
           className="doqu-logo-nav"
-          style={{ width: "60px", height: "42px" }}
+          style={{ width: "60px", height: "42px", cursor: "pointer" }}
+          onClick={() => {
+            window.location.href = "/";
+          }}
         />
         <img
           src={doquText}
           className="doqu-text-nav"
-          style={{ height: "24px" }}
+          style={{ height: "24px", cursor: "pointer" }}
+          onClick={() => {
+            window.location.href = "/";
+          }}
         />
       </div>
 
@@ -52,11 +84,18 @@ const NavBar = () => {
                 padding: "0px 20px",
               }}
             >
-              <div style={{ cursor: "pointer" }}>{item.name}</div>
+              <div
+                style={{ cursor: "pointer" }}
+                onClick={() => {
+                  window.location.href = item.link;
+                }}
+              >
+                {item.name}
+              </div>
             </li>
           );
         })}
-        <li
+        {/* <li
           style={{
             background: "#032B44",
             color: "white",
@@ -70,11 +109,54 @@ const NavBar = () => {
           }}
         >
           <div>Demo</div>
-        </li>
+        </li> */}
       </ul>
 
-      <div className="nav-menu-small">
-        <img src={menuIcon} style={{ height: "18px", cursor: "pointer" }} />
+      <div className="nav-menu-small" ref={smallNavRef}>
+        <img
+          src={menuIcon}
+          style={{ height: "18px", cursor: "pointer" }}
+          onClick={() => {
+            setOpenNav(!openNav);
+          }}
+        />
+        {openNav && (
+          <div
+            style={{
+              backgroundColor: "#032B44",
+              position: "absolute",
+              top: "100%",
+              right: 0,
+              width: "min(200px, 100vw)",
+              height: "200px",
+              color: "white",
+            }}
+          >
+            <ul
+              style={{
+                listStyle: "none",
+                fontSize: "24px",
+                padding: "5px",
+                margin: 0,
+              }}
+              className="nav-menu-small-list"
+            >
+              {navItems.map((item, index) => (
+                <li
+                  key={`navitem-${index}`}
+                  style={{
+                    cursor: "pointer",
+                  }}
+                  onClick={() => {
+                    window.location.href = item.link;
+                  }}
+                >
+                  {item.name}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );

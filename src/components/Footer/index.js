@@ -29,12 +29,26 @@ const Footer = () => {
         <div style={{ display: "flex" }}>
           <div>
             <p style={{ color: "#438F9D" }}>Company</p>
-            <p>Contact Us</p>
+            <p
+              style={{ cursor: "pointer" }}
+              onClick={() => {
+                window.location.href = "/contact";
+              }}
+            >
+              Contact Us
+            </p>
           </div>
           <div className="footer-main-gap"></div>
           <div>
             <p style={{ color: "#438F9D" }}>Resources</p>
-            <p>Docs</p>
+            <p
+              style={{ cursor: "pointer" }}
+              onClick={() => {
+                window.location.href = "/docs/intro";
+              }}
+            >
+              Docs
+            </p>
           </div>
         </div>
         <div>
