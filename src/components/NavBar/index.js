@@ -4,10 +4,20 @@ import menuIcon from "../../../static/img/menu-icon.png";
 import doqu from "../../../static/img/doqu.png";
 import doquText from "../../../static/img/doqu-text.png";
 
+import docs from "../../../static/img/documentation.png";
+import blogs from "../../../static/img/blogs.png";
+import contact from "../../../static/img/contact.png";
+
 const navItems = [
   { name: "Contact", link: "/contact" },
   { name: "Docs", link: "/docs/intro" },
   { name: "Blog", link: "/blog" },
+];
+
+const navItemsSmall = [
+  { name: "Documentation", link: "/docs/intro", icon: docs },
+  { name: "Blogs", link: "/blog", icon: blogs },
+  { name: "Contact", link: "/contact", icon: contact },
 ];
 
 const navMenuStyle = {
@@ -127,30 +137,42 @@ const NavBar = () => {
               position: "absolute",
               top: "100%",
               right: 0,
-              width: "min(200px, 100vw)",
-              height: "200px",
-              color: "white",
+              width: "min(240px, 100vw)",
+              height: "calc(100vh - 63px)",
+              paddingTop: "20px",
+              color: "rgb(200, 200, 200)",
             }}
           >
             <ul
               style={{
                 listStyle: "none",
-                fontSize: "24px",
-                padding: "5px",
+                fontSize: "18px",
+                padding: "5px 25px",
                 margin: 0,
               }}
               className="nav-menu-small-list"
             >
-              {navItems.map((item, index) => (
+              {navItemsSmall.map((item, index) => (
                 <li
                   key={`navitem-${index}`}
                   style={{
                     cursor: "pointer",
+                    padding: "5px",
+                    display: "flex",
+                    alignItems: "center",
                   }}
                   onClick={() => {
                     window.location.href = item.link;
                   }}
                 >
+                  <img
+                    src={item.icon}
+                    style={{
+                      width: "20px",
+                      height: "20px",
+                      marginRight: "20px",
+                    }}
+                  />
                   {item.name}
                 </li>
               ))}
