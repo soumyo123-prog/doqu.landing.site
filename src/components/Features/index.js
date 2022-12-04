@@ -166,7 +166,7 @@ const Features = () => {
               maxWidth: "400px",
             }}
           >
-            DoQu AI Supports
+            Alchemia AI Supports
             <div
               className="supports-card"
               style={{
@@ -292,7 +292,7 @@ const Features = () => {
             </div>
           </div>
           <p style={{ lineHeight: "24px" }}>
-            Connect directly from Jupyter Notebooks to DoQu server with DoQu SDK
+            Connect directly from Jupyter Notebooks to Alchemia AI server with Alchemia SDK
             and start parsing the inputs. Upload the predictions back to server
             for manual verification.
           </p>
@@ -307,7 +307,7 @@ const Features = () => {
               width: "min(300px, 100%)",
             }}
           >
-            Install doqu SDK using pip:
+            Install Alchemia SDK using pip:
             <div
               style={{
                 backgroundColor: "#F1F1F1",
@@ -319,7 +319,7 @@ const Features = () => {
                 textAlign: "left",
               }}
             >
-              pip install doqu
+              pip install alchemia
               <div
                 style={{
                   position: "absolute",
@@ -360,7 +360,7 @@ const Features = () => {
             </div>
           </div>
           <p style={{ lineHeight: "24px" }}>
-            Powerful and rich DoQu UI allows 100% accuracy. Monitor each task,
+            Powerful and rich Alchemia AI UI allows 100% accuracy. Monitor each task,
             manually verify and correct data outputs and approve outputs for
             further processing.
           </p>
@@ -420,7 +420,7 @@ const Features = () => {
           </div>
           <p style={{ lineHeight: "24px" }}>
             Rich SDK allows to retrieve high quality manually verified
-            annotations from the DoQu server. Use these data to further improve
+            annotations from the Alchemia AI server. Use these data to further improve
             the automation logic and so next time you spend less time on manual
             processes.
           </p>

@@ -29,10 +29,10 @@ const MainSection = () => {
           Visualize & Verify
           <br />
           <span style={{ color: "#438F9D" }}>AI</span> Predictions
-        </p>
+        </p>  
         <p className="header-main-caption" style={{ fontWeight: 500 }}>
           Teams building machine learning pipelines use <br />
-          DoQu to visualise, verify and correct extractions.
+          Alchemia AI to visualise, verify and correct extractions.
         </p>
       </div>
 

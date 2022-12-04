@@ -1,7 +1,7 @@
 version: 0.2
 env:
   parameter-store:
-    REACT_APP_CLOUDFRONT_ID: "REACT-APP-DOQU-LANDING-SITE-CLOUDFRONT-ID"
+    REACT_APP_CLOUDFRONT_ID: "REACT-APP-ALCHEMIA-LANDING-SITE-CLOUDFRONT-ID"
 phases:
   pre_build:
     commands:

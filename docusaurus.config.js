@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Doqu App',
+  title: 'Alchemia AI',
   tagline: 'Create document data extraction and annotation pipelines in a whim!',
-  url: 'https://doqu.app',
+  url: 'https://alchemia.ai',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -16,8 +16,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'einmind', // Usually your GitHub org/user name.
-  projectName: 'doqu.landing.site', // Usually your repo name.
+  organizationName: 'Alchemia AI', // Usually your GitHub org/user name.
+  projectName: 'alchemia.landing.site', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
