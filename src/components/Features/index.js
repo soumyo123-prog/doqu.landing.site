@@ -447,7 +447,7 @@ const Features = () => {
                 textAlign: "left",
               }}
             >
-              doqu.get_annotations(task)
+              alchemia.get_annotations(task)
               <div
                 style={{
                   position: "absolute",

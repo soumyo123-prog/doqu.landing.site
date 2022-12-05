@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 
 import menuIcon from "../../../static/img/menu-icon.png";
-import doqu from "../../../static/img/doqu.png";
-import doquText from "../../../static/img/doqu-text.png";
+import doqu from "../../../static/img/alchemia-logo.png";
+import doquText from "../../../static/img/alchemia-logo.png";
 
 import docs from "../../../static/img/documentation.png";
 import blogs from "../../../static/img/blogs.png";
