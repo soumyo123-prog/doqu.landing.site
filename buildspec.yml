@@ -1,7 +1,4 @@
 version: 0.2
-env:
-  parameter-store:
-    AWS_ACCOUNT_ID: "ENVIRONMENT_AWS_ACCOUNT_ID"
 phases: 
   install:
     runtime-versions:
@@ -14,6 +11,7 @@ phases:
     - echo Logging in to Amazon ECR.... 
     - aws --version
     - $(aws ecr get-login --no-include-email --region eu-central-1)
+    - AWS_ACCOUNT_ID=$(echo $CODEBUILD_BUILD_ARN | cut -f5 -d ':')
   build:
     commands:
       - echo Build started on `date`
