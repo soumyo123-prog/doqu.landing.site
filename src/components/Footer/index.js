@@ -38,18 +38,7 @@ const Footer = () => {
               Contact Us
             </p>
           </div>
-          <div className="footer-main-gap"></div>
-          <div>
-            <p style={{ color: "#438F9D" }}>Resources</p>
-            <p
-              style={{ cursor: "pointer" }}
-              onClick={() => {
-                window.location.href = "/docs/intro";
-              }}
-            >
-              Docs
-            </p>
-          </div>
+          <div className="footer-main-gap"></div>          
         </div>
       </div>
 
