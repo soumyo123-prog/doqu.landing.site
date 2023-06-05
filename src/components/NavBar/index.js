@@ -17,8 +17,8 @@ const navItems = [
 ];
 
 const navItemsSmall = [
-  { name: "Documentation", link: "/docs/intro", icon: docs },
-  { name: "Blogs", link: "/blog", icon: blogs },
+  { name: "Documentation", link: "https://docs.einmind.com", icon: docs },
+  // { name: "Blogs", link: "/blog", icon: blogs },
   { name: "Contact", link: "/contact", icon: contact },
 ];
 
