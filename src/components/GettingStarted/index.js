@@ -73,7 +73,7 @@ const GettingStared = () => {
           <img
             src={arrowRight}
             onClick={() => {
-              window.location.href = "/docs/intro";
+              window.location.href = "https://docs.einmind.com";
             }}
             style={{ height: "40px", cursor: "pointer" }}
           />
