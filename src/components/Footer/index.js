@@ -21,7 +21,7 @@ const Footer = () => {
       <div
         className="footer-main"
         style={{
-          display: "flex",
+          display: "none",
           justifyContent: "space-between",
           alignItems: "center",
         }}
@@ -50,9 +50,6 @@ const Footer = () => {
               Docs
             </p>
           </div>
-        </div>
-        <div>
-          <img src={logoW} style={{ height: "70px" }} />
         </div>
       </div>
 

@@ -29,10 +29,10 @@ const GettingStared = () => {
             padding: "25px",
           }}
         >
-          <p style={{ fontSize: "20px", fontWeight: 600 }}>Schedule a Demo</p>
+          <p style={{ fontSize: "20px", fontWeight: 600 }}>Schedule a demo</p>
           <p className="schedule-demo-text">
-            Structure, automate, and qualify your training data efforts. Get
-            started now for free, immediate access, no credit card required.
+            Start generating insights and extracting actionable data from your unstructured data. Get
+            started now.
           </p>
 
           <div
@@ -64,7 +64,7 @@ const GettingStared = () => {
             position: "relative",
           }}
         >
-          <p style={{ fontSize: "20px", fontWeight: 600 }}>Read Docs</p>
+          <p style={{ fontSize: "20px", fontWeight: 600 }}>Read docs</p>
           <p className="readdocs-text">
             Explore and get comfortable with the important components of the
             platform

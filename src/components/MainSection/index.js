@@ -23,16 +23,24 @@ const MainSection = () => {
             lineHeight: "60px",
             padding: 0,
             margin: 0,
-            marginBottom: "20px",
+            marginBottom: "50px",
           }}
         >
-          Visualize & Verify
+          A Unified <span style={{ color: "#438F9D" }}>AI</span>  Gateway <br/>
+          for <span style={{ color: "#438F9D" }}>data extraction</span>
+          {/* Visualize & Verify
           <br />
-          <span style={{ color: "#438F9D" }}>AI</span> Predictions
+          <span style={{ color: "#438F9D" }}>AI</span> Predictions */}
+
+          {/* A <span style={{ color: "#438F9D" }}>unified interface</span> 
+          <br />
+          to instantly share and access AI models. */}
+          {/* <br />
+          <span style={{ color: "#438F9D" }}>AI</span> Predictions */}
+
         </p>  
-        <p className="header-main-caption" style={{ fontWeight: 500 }}>
-          Teams building machine learning pipelines use <br />
-          Alchemia AI to visualise, verify and correct extractions.
+        <p className="header-main-caption" style={{ fontWeight: 500, fontSize: '20px'}}>                    
+          EinMind provides a rich AI app store and a powerful interface to build <br/>complex AI powered data extraction pipelines.
         </p>
       </div>
 

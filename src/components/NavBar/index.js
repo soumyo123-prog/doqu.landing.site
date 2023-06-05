@@ -10,8 +10,10 @@ import contact from "../../../static/img/contact.png";
 
 const navItems = [
   { name: "Contact", link: "/contact" },
-  { name: "Docs", link: "/docs/intro" },
-  { name: "Blog", link: "/blog" },
+  { name: "Docs", link: "https://docs.einmind.com/" },
+  { name: "Login", link: "https://studio.einmind.com/" },
+  // { name: "Docs", link: "/docs/intro" },
+  // { name: "Blog", link: "/blog" },
 ];
 
 const navItemsSmall = [
@@ -67,7 +69,7 @@ const NavBar = () => {
         <img
           src={doqu}
           className="doqu-logo-nav"
-          style={{ width: "60px", height: "42px", cursor: "pointer" }}
+          style={{ width: "51px", height: "42px", cursor: "pointer" }}
           onClick={() => {
             window.location.href = "/";
           }}

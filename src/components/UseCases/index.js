@@ -54,7 +54,7 @@ const UseCases = () => {
     >
       <h2 style={{ fontSize: "25px" }}>Use Cases</h2>
       <p style={{}}>
-        Alchemia AI apps support building various data extraction pipelines
+        EinMind apps support building various data extraction pipelines
       </p>
 
       <div className="usecases-grid">

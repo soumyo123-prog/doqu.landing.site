@@ -97,7 +97,7 @@ const Features = () => {
               });
             }}
           >
-            App Builder
+            AI App Store
           </li>
           <li
             className={activeSection === 1 ? "activeTab" : "inactiveTab"}
@@ -108,7 +108,7 @@ const Features = () => {
               });
             }}
           >
-            AI Integration
+            AI Interfaces
           </li>
           <li
             className={activeSection === 2 ? "activeTab" : "inactiveTab"}
@@ -119,7 +119,7 @@ const Features = () => {
               });
             }}
           >
-            Quality
+            Quality and Access
           </li>
           <li
             className={activeSection === 3 ? "activeTab" : "inactiveTab"}
@@ -130,7 +130,7 @@ const Features = () => {
               });
             }}
           >
-            Continuous Learning
+            AI Workflows
           </li>
         </ul>
       </div>
@@ -146,14 +146,85 @@ const Features = () => {
               marginBottom: "10px",
             }}
           >
-            App Builder
+            AI App Store
+            <div className="red-square">
+              &nbsp;&nbsp; <RedSquare />
+            </div>
+          </div>
+          <p style={{ lineHeight: "24px" }}>            
+            EinMind provides a rich App Store that gives you an immediate access to powerful AI apps. 
+            App Store enables data science teams to instantly publish and share their own apps through EinMind SDK.
+          </p>
+
+          <div
+            style={{
+              boxShadow: "0px 0px 2px 2px rgba(0, 0, 0, 0.25)",
+              borderRadius: "10px",
+              padding: "5px 12px",
+              fontSize: "14px",
+              color: "#776F6F",
+              width: "min(300px, 100%)",
+            }}
+          >
+            Install EinMind SDK using pip:
+            <div
+              style={{
+                backgroundColor: "#F1F1F1",
+                position: "relative",
+                paddingLeft: "15px",
+                margin: "5px 0px",
+                color: "#032B44",
+                fontWeight: 500,
+                textAlign: "left",
+              }}
+            >
+              pip install python-einmind
+              <div
+                style={{
+                  position: "absolute",
+                  width: "5px",
+                  height: "100%",
+                  backgroundColor: "#438F9D",
+                  left: 0,
+                  top: 0,
+                }}
+              ></div>
+            </div>
+          </div>
+
+        </div>
+        <div style={{ flex: 1, justifyContent: "center", display: "flex" }}>
+          <img
+            src={img2}
+            style={{
+              padding: "40px",
+            }}
+          />
+        </div>
+      </div>
+
+      <div
+        className="features-section"
+        style={{ flexDirection: "row-reverse" }}
+      >
+        <div className="features-section-text" style={{ flex: 1 }} ref={ref2}>
+          <div
+            style={{
+              fontSize: "25px",
+              fontWeight: "bold",
+              display: "flex",
+              alignItems: "baseline",
+              marginBottom: "10px",
+            }}
+          >
+            Dedicated AI Interfaces
             <div className="red-square">
               &nbsp;&nbsp; <RedSquare />
             </div>
           </div>
           <p style={{ lineHeight: "24px" }}>
-            Create data processing apps with no code in minutes. Define input
-            and expected output types. Start uploading data for data extraction
+          Powerful standardized interfaces enable seamless interaction with AI apps and visualize AI predictions. 
+          EinMind provides dedicated interfaces that support uploading and viewing various unstructured data.
           </p>
 
           <div
@@ -166,7 +237,7 @@ const Features = () => {
               maxWidth: "400px",
             }}
           >
-            Alchemia AI Supports
+            Extract values from unstructured data such as 
             <div
               className="supports-card"
               style={{
@@ -261,81 +332,11 @@ const Features = () => {
               </div>
             </div>
           </div>
+          
         </div>
         <div style={{ flex: 1, justifyContent: "center", display: "flex" }}>
           <img
             src={img1}
-            style={{
-              padding: "40px",
-            }}
-          />
-        </div>
-      </div>
-
-      <div
-        className="features-section"
-        style={{ flexDirection: "row-reverse" }}
-      >
-        <div className="features-section-text" style={{ flex: 1 }} ref={ref2}>
-          <div
-            style={{
-              fontSize: "25px",
-              fontWeight: "bold",
-              display: "flex",
-              alignItems: "baseline",
-              marginBottom: "10px",
-            }}
-          >
-            AI Integration
-            <div className="red-square">
-              &nbsp;&nbsp; <RedSquare />
-            </div>
-          </div>
-          <p style={{ lineHeight: "24px" }}>
-            Connect directly from Jupyter Notebooks to Alchemia AI server with Alchemia SDK
-            and start parsing the inputs. Upload the predictions back to server
-            for manual verification.
-          </p>
-
-          <div
-            style={{
-              boxShadow: "0px 0px 2px 2px rgba(0, 0, 0, 0.25)",
-              borderRadius: "10px",
-              padding: "5px 12px",
-              fontSize: "14px",
-              color: "#776F6F",
-              width: "min(300px, 100%)",
-            }}
-          >
-            Install Alchemia SDK using pip:
-            <div
-              style={{
-                backgroundColor: "#F1F1F1",
-                position: "relative",
-                paddingLeft: "15px",
-                margin: "5px 0px",
-                color: "#032B44",
-                fontWeight: 500,
-                textAlign: "left",
-              }}
-            >
-              pip install alchemia
-              <div
-                style={{
-                  position: "absolute",
-                  width: "5px",
-                  height: "100%",
-                  backgroundColor: "#438F9D",
-                  left: 0,
-                  top: 0,
-                }}
-              ></div>
-            </div>
-          </div>
-        </div>
-        <div style={{ flex: 1, justifyContent: "center", display: "flex" }}>
-          <img
-            src={img2}
             style={{
               padding: "40px",
             }}
@@ -354,15 +355,15 @@ const Features = () => {
               marginBottom: "10px",
             }}
           >
-            Quantity
+            Quality and Access
             <div className="red-square">
               &nbsp;&nbsp; <RedSquare />
             </div>
           </div>
           <p style={{ lineHeight: "24px" }}>
-            Powerful and rich Alchemia AI UI allows 100% accuracy. Monitor each task,
-            manually verify and correct data outputs and approve outputs for
-            further processing.
+          AI models are never 100% accurate. EinMind provides guardrails to protect and extract critical 
+          information correctly through configurable access managemenet and user friendly AI verification 
+          interfaces.
           </p>
 
           <div
@@ -413,19 +414,17 @@ const Features = () => {
               marginBottom: "10px",
             }}
           >
-            Continuous Learning
+            Mix and Match AI Apps into Workflows
             <div className="red-square">
               &nbsp;&nbsp; <RedSquare />
             </div>
           </div>
           <p style={{ lineHeight: "24px" }}>
-            Rich SDK allows to retrieve high quality manually verified
-            annotations from the Alchemia AI server. Use these data to further improve
-            the automation logic and so next time you spend less time on manual
-            processes.
+          Build complex data extraction pipelines by connecting various AI apps without any coding in minutes. 
+          Explore and integrate best AI apps to your workflows in a few clicks without any vendor lock in.
           </p>
 
-          <div
+          {/* <div
             style={{
               boxShadow: "0px 0px 2px 2px rgba(0, 0, 0, 0.25)",
               borderRadius: "10px",
@@ -459,7 +458,7 @@ const Features = () => {
                 }}
               ></div>
             </div>
-          </div>
+          </div> */}
         </div>
         <div style={{ flex: 1, justifyContent: "center", display: "flex" }}>
           <img
