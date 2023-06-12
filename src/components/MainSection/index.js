@@ -26,8 +26,7 @@ const MainSection = () => {
             marginBottom: "50px",
           }}
         >
-          A Unified <span style={{ color: "#438F9D" }}>AI</span>  Gateway <br/>
-          for <span style={{ color: "#438F9D" }}>data extraction</span>
+          <span style={{ color: "#438F9D" }}>One</span> platform to access hundreds of <span style={{ color: "#438F9D" }}>AI</span> apps
           {/* Visualize & Verify
           <br />
           <span style={{ color: "#438F9D" }}>AI</span> Predictions */}
@@ -39,8 +38,11 @@ const MainSection = () => {
           <span style={{ color: "#438F9D" }}>AI</span> Predictions */}
 
         </p>  
-        <p className="header-main-caption" style={{ fontWeight: 500, fontSize: '20px'}}>                    
+        {/* <p className="header-main-caption" style={{ fontWeight: 500, fontSize: '20px'}}>                    
           EinMind provides a rich AI app store and a powerful interface to build <br/>complex AI powered data extraction pipelines.
+        </p> */}
+        <p className="header-main-caption" style={{ fontWeight: 500, fontSize: '20px'}}>                    
+        PDF Extraction | Computer Vision | Large Language Models | Natural Language Processing | Audio Processing | Video Processing
         </p>
       </div>
 
