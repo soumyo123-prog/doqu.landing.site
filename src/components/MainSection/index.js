@@ -138,7 +138,7 @@ const MainSection = () => {
           >
             The most complete platform for unlocking the potential of
             <br />
-            teams that build AI powered data extraction pipelines
+            teams that build AI powered data pipelines
           </p>
         </div>
       </div>

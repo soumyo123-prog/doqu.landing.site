@@ -423,42 +423,7 @@ const Features = () => {
           Build complex data extraction pipelines by connecting various AI apps without any coding in minutes. 
           Explore and integrate best AI apps to your workflows in a few clicks without any vendor lock in.
           </p>
-
-          {/* <div
-            style={{
-              boxShadow: "0px 0px 2px 2px rgba(0, 0, 0, 0.25)",
-              borderRadius: "10px",
-              padding: "5px 12px",
-              fontSize: "14px",
-              color: "#776F6F",
-              width: "min(300px, 100%)",
-            }}
-          >
-            Retrieve manually created annotations:
-            <div
-              style={{
-                backgroundColor: "#F1F1F1",
-                position: "relative",
-                paddingLeft: "15px",
-                margin: "5px 0px",
-                color: "#032B44",
-                fontWeight: 500,
-                textAlign: "left",
-              }}
-            >
-              alchemia.get_annotations(task)
-              <div
-                style={{
-                  position: "absolute",
-                  width: "5px",
-                  height: "100%",
-                  backgroundColor: "#438F9D",
-                  left: 0,
-                  top: 0,
-                }}
-              ></div>
-            </div>
-          </div> */}
+          
         </div>
         <div style={{ flex: 1, justifyContent: "center", display: "flex" }}>
           <img
