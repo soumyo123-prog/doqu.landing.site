@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
 import ecoBg from "../../../static/img/ecoBg.png";
 
 const MainSection = () => {
+  const videoRef = useRef(undefined);
+  useEffect(() => {
+    videoRef.current.defaultMuted = true;
+  });
   return (
     <div style={{ position: "relative" }}>
       <div
@@ -26,23 +30,26 @@ const MainSection = () => {
             marginBottom: "50px",
           }}
         >
-          <span style={{ color: "#438F9D" }}>One</span> platform to access hundreds of <span style={{ color: "#438F9D" }}>AI</span> apps
+          <span style={{ color: "#438F9D" }}>One</span> platform to access
+          hundreds of <span style={{ color: "#438F9D" }}>AI</span> apps
           {/* Visualize & Verify
           <br />
           <span style={{ color: "#438F9D" }}>AI</span> Predictions */}
-
           {/* A <span style={{ color: "#438F9D" }}>unified interface</span> 
           <br />
           to instantly share and access AI models. */}
           {/* <br />
           <span style={{ color: "#438F9D" }}>AI</span> Predictions */}
-
-        </p>  
+        </p>
         {/* <p className="header-main-caption" style={{ fontWeight: 500, fontSize: '20px'}}>                    
           EinMind provides a rich AI app store and a powerful interface to build <br/>complex AI powered data extraction pipelines.
         </p> */}
-        <p className="header-main-caption" style={{ fontWeight: 500, fontSize: '20px'}}>                    
-        PDF Extraction | Computer Vision | Large Language Models | Natural Language Processing | Audio Processing | Video Processing
+        <p
+          className="header-main-caption"
+          style={{ fontWeight: 500, fontSize: "20px" }}
+        >
+          PDF Extraction | Computer Vision | Large Language Models | Natural
+          Language Processing | Audio Processing | Video Processing
         </p>
       </div>
 
@@ -145,9 +152,13 @@ const MainSection = () => {
 
       <video
         src="https://d259fuf47d0c5i.cloudfront.net/doqu-resources/landing-site/network-video-2-comp.mp4"
+        typeof="video/mp4"
+        ref={videoRef}
         autoPlay
         muted
         loop
+        playsInline
+        preload="auto"
         style={{
           position: "absolute",
           top: 0,
