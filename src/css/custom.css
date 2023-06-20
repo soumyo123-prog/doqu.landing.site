@@ -32,3 +32,9 @@
 #__docusaurus {
   color: #000;
 }
+
+@media all and (max-width: 540px) {
+  .video-bg {
+    opacity: 0.70;
+  }
+}
