@@ -159,6 +159,7 @@ const MainSection = () => {
         loop
         playsInline
         preload="auto"
+        className="video-bg"
         style={{
           position: "absolute",
           top: 0,
