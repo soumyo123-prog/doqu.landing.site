@@ -2,6 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+.page-template {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  margin-top: 3.3rem;
+}
+.border-theme {
+  border: solid 1px #dae7f2;
+}
+input,
+textarea,
+select {
+  box-sizing: border-box;
+  padding: 0.5rem;
+  border: solid 1px #dae7f2;
+  border-radius: 0.5rem;
+  color: #39465e;
+  transition: all 0.2s ease-in-out;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border: solid 1px #428f9e;
+}
+input:hover,
+textarea:hover,
+select:hover {
+  background-color: #f6f7f8;
+}
+button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+select {
+  width: inherit;
+}
+textarea {
+  resize: none;
+}
+.btn {
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+.btn-primary {
+  background-color: #428f9e;
+  color: white;
+  border: solid 1px #428f9e;
+}
+.btn-primary:hover {
+  background-color: #03859f;
+}
+.text-desc {
+  color: #70768c;
+  font-size: 0.8rem;
+}
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -23,7 +80,7 @@
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+[data-theme="dark"] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
@@ -40,6 +97,6 @@
 
 @media all and (max-width: 540px) {
   .video-bg {
-    opacity: 0.70;
+    opacity: 0.7;
   }
 }
