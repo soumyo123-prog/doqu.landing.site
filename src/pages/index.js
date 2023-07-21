@@ -12,7 +12,7 @@ import Footer from "../components/Footer";
 export default function Home() {
   return (
     <div>
-      <NavBar />
+      <NavBar activeTab={"home"} />
       <div style={{ height: "63px" }}></div>
       <MainSection />
       <Features />
