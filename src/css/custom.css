@@ -3,9 +3,13 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 .page-template {
-  font-family: "Inter", sans-serif;
   font-size: 14px;
   margin-top: 3.3rem;
+  background-color: #f0f5fa;
+  min-height: calc(100vh - 3.3rem);
+}
+.page-template * {
+  font-family: "Inter", sans-serif;
 }
 .border-theme {
   border: solid 1px #dae7f2;

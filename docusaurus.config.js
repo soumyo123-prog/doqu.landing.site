@@ -1,3 +1,4 @@
+require('dotenv').config()
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
@@ -26,6 +27,10 @@ const config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
+  customFields: {
+    // Put your custom environment here
+    BASE_API_URL: process.env.BASE_API_URL,
+  },
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
