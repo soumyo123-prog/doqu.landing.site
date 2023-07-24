@@ -9,9 +9,7 @@ import blogs from "../../../static/img/blogs.png";
 import contact from "../../../static/img/contact.png";
 
 const navItems = [
-  { name: "Contact", link: "/contact" },
-  { name: "Docs", link: "https://docs.einmind.com/" },
-  { name: "Login", link: "https://studio.einmind.com/" },
+  { name: "Get started", link: "https://tally.so/r/wvejQX" },
   // { name: "Docs", link: "/docs/intro" },
   // { name: "Blog", link: "/blog" },
 ];

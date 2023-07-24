@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import img1 from "../../../static/img/1 1.png";
-import img2 from "../../../static/img/2 1.png";
-import img3 from "../../../static/img/3 1.png";
-import img4 from "../../../static/img/4 1.png";
+import img_medical_coding from "../../../static/img/medical-coding-11.png";
+import img_document_coding from "../../../static/img/document-coding-3.png";
+import img3 from "../../../static/img/app-store-7.png";
+import img4 from "../../../static/img/workflows-4.png";
 
 import pdf from "../../../static/vectors/pdf.png";
 import imag1 from "../../../static/vectors/img1.png";
@@ -97,7 +97,7 @@ const Features = () => {
               });
             }}
           >
-            AI App Store
+            AI Medical Term Coding
           </li>
           <li
             className={activeSection === 1 ? "activeTab" : "inactiveTab"}
@@ -108,7 +108,7 @@ const Features = () => {
               });
             }}
           >
-            AI Interfaces
+            Document Coding
           </li>
           <li
             className={activeSection === 2 ? "activeTab" : "inactiveTab"}
@@ -119,7 +119,7 @@ const Features = () => {
               });
             }}
           >
-            Quality and Access
+            Rich App Store
           </li>
           <li
             className={activeSection === 3 ? "activeTab" : "inactiveTab"}
@@ -130,7 +130,7 @@ const Features = () => {
               });
             }}
           >
-            AI Workflows
+            Powerful Workflows
           </li>
         </ul>
       </div>
@@ -146,17 +146,61 @@ const Features = () => {
               marginBottom: "10px",
             }}
           >
-            AI App Store
+            AI Medical Term Coding
             <div className="red-square">
               &nbsp;&nbsp; <RedSquare />
             </div>
           </div>
-          <p style={{ lineHeight: "24px" }}>            
-            EinMind provides a rich App Store that gives you an immediate access to powerful AI apps. 
-            App Store enables data science teams to instantly publish and share their own apps through EinMind SDK.
+          <p style={{ lineHeight: "24px" }}>                        
+          Experience the power of AI with EinMind's advanced medical term coding applications. Our intuitive, cutting-edge platform seamlessly translates complex medical terms into widely accepted ontologies such as ICD-9-CM, ICD-10-CM, MedDRA, ATC, SNOMED CT, RxNORM and more. With our tools, enjoy unprecedented accuracy and control with every mapping step being visible and manageable. 
+            
           </p>
-
+          
           <div
+            style={{
+              boxShadow: "0px 0px 2px 2px rgba(0, 0, 0, 0.25)",
+              borderRadius: "10px",
+              padding: "18px",
+              fontSize: "12px",
+              color: "#776F6F",
+              maxWidth: "450px",
+            }}
+          >
+            Currently supported medical ontologies:
+            <div
+              className="supports-card2"
+              style={{
+                display: "grid",
+                rowGap: "10px",
+                columnGap: "10px",
+                marginTop: "10px",
+              }}
+            >
+              <span>                
+                ICD-9-CM Coding
+              </span>
+              <span>
+                ICD-10-CM Coding                
+              </span>
+              <span>
+                ICD-10-PCS Coding                
+              </span>
+              <span>
+                ICD-11 Coding
+              </span>
+              <span>                
+                MedDRA Coding
+              </span>
+              <span>                
+                ATC Coding
+              </span>
+              <span>                
+              CPT® Coding
+              </span>              
+            </div>
+          </div>
+          
+          {/* <div
             style={{
               boxShadow: "0px 0px 2px 2px rgba(0, 0, 0, 0.25)",
               borderRadius: "10px",
@@ -190,14 +234,14 @@ const Features = () => {
                 }}
               ></div>
             </div>
-          </div>
+          </div> */}
 
         </div>
         <div style={{ flex: 1, justifyContent: "center", display: "flex" }}>
           <img
-            src={img2}
+            src={img_medical_coding}
             style={{
-              padding: "40px",
+              padding: "20px",
             }}
           />
         </div>
@@ -217,15 +261,103 @@ const Features = () => {
               marginBottom: "10px",
             }}
           >
-            Dedicated AI Interfaces
+            Document Coding
             <div className="red-square">
               &nbsp;&nbsp; <RedSquare />
             </div>
           </div>
           <p style={{ lineHeight: "24px" }}>
-          Powerful standardized interfaces enable seamless interaction with AI apps and visualize AI predictions. 
-          EinMind provides dedicated interfaces that support uploading and viewing various unstructured data.
+          Discover EinMind's 'document coding' tool, an AI-powered marvel that swiftly extracts and suggests codes for medical terms. It simplifies the coding process by intelligently identifying medical entities in documents and offering code suggestions, turning complex medical data into valuable, code-rich data.
           </p>
+          
+        </div>
+        <div style={{ flex: 1, justifyContent: "center", display: "flex" }}>
+          <img
+            src={img_document_coding}
+            style={{
+              padding: "20px",
+            }}
+          />
+        </div>
+      </div>
+
+      <div className="features-section">
+        <div className="features-section-text" style={{ flex: 1 }} ref={ref3}>
+          <div
+            style={{
+              fontSize: "25px",
+              fontWeight: "bold",
+              display: "flex",
+              alignItems: "baseline",
+              marginBottom: "10px",
+            }}
+          >
+            Rich App Store
+            <div className="red-square">
+              &nbsp;&nbsp; <RedSquare />
+            </div>
+          </div>
+          <p style={{ lineHeight: "24px" }}>
+          Explore EinMind's comprehensive app store, designed to provide a one-stop solution for all your medical document pre-processing needs. Equipped with an array of innovative tools, our platform transforms the intricate task of preparing medical data into a streamlined, user-friendly process.          
+          </p>
+          
+          {/* <div
+            style={{
+              boxShadow: "0px 0px 2px 2px rgba(0, 0, 0, 0.25)",
+              borderRadius: "10px",
+              padding: "18px 22px",
+              fontSize: "12px",
+              width: "200px",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                border: "1px solid #032B44",
+                padding: "5px 20px",
+              }}
+            >
+              <div
+                style={{ color: "black", fontWeight: "bold", fontSize: "20px" }}
+              >
+                Verified
+              </div>
+            </div>
+          </div> */}
+        </div>
+        <div style={{ flex: 1, justifyContent: "center", display: "flex" }}>
+          <img
+            src={img3}
+            style={{
+              padding: "20px",
+            }}
+          />          
+        </div>
+      </div>
+
+      <div
+        className="features-section"
+        style={{ flexDirection: "row-reverse" }}
+      >
+        <div className="features-section-text" style={{ flex: 1 }} ref={ref4}>
+          <div
+            style={{
+              fontSize: "25px",
+              fontWeight: "bold",
+              display: "flex",
+              alignItems: "baseline",
+              marginBottom: "10px",
+            }}
+          >
+            Powerful Workflows
+            <div className="red-square">
+              &nbsp;&nbsp; <RedSquare />
+            </div>
+          </div>
+          <p style={{ lineHeight: "24px" }}>
+          Experience the ease of data extraction with EinMind's workflow builder. It enables users to design custom pipelines for complex scenarios without any coding. This intuitive tool turns complicated tasks into manageable processes, giving you control over your data extraction needs. Simplify your work with EinMind.
+          </p>
+
 
           <div
             style={{
@@ -336,100 +468,9 @@ const Features = () => {
         </div>
         <div style={{ flex: 1, justifyContent: "center", display: "flex" }}>
           <img
-            src={img1}
-            style={{
-              padding: "40px",
-            }}
-          />
-        </div>
-      </div>
-
-      <div className="features-section">
-        <div className="features-section-text" style={{ flex: 1 }} ref={ref3}>
-          <div
-            style={{
-              fontSize: "25px",
-              fontWeight: "bold",
-              display: "flex",
-              alignItems: "baseline",
-              marginBottom: "10px",
-            }}
-          >
-            Quality and Access
-            <div className="red-square">
-              &nbsp;&nbsp; <RedSquare />
-            </div>
-          </div>
-          <p style={{ lineHeight: "24px" }}>
-          AI models are never 100% accurate. EinMind provides guardrails to protect and extract critical 
-          information correctly through configurable access managemenet and user friendly AI verification 
-          interfaces.
-          </p>
-
-          <div
-            style={{
-              boxShadow: "0px 0px 2px 2px rgba(0, 0, 0, 0.25)",
-              borderRadius: "10px",
-              padding: "18px 22px",
-              fontSize: "12px",
-              width: "200px",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                border: "1px solid #032B44",
-                padding: "5px 20px",
-              }}
-            >
-              <div
-                style={{ color: "black", fontWeight: "bold", fontSize: "20px" }}
-              >
-                Verified
-              </div>
-            </div>
-          </div>
-        </div>
-        <div style={{ flex: 1, justifyContent: "center", display: "flex" }}>
-          <img
-            src={img3}
-            style={{
-              padding: "40px",
-            }}
-          />
-        </div>
-      </div>
-
-      <div
-        className="features-section"
-        style={{ flexDirection: "row-reverse" }}
-      >
-        <div className="features-section-text" style={{ flex: 1 }} ref={ref4}>
-          <div
-            style={{
-              fontSize: "25px",
-              fontWeight: "bold",
-              display: "flex",
-              alignItems: "baseline",
-              marginBottom: "10px",
-            }}
-          >
-            Mix and Match AI Apps into Workflows
-            <div className="red-square">
-              &nbsp;&nbsp; <RedSquare />
-            </div>
-          </div>
-          <p style={{ lineHeight: "24px" }}>
-          Build complex data extraction pipelines by connecting various AI apps without any coding in minutes. 
-          Explore and integrate best AI apps to your workflows in a few clicks without any vendor lock in.
-          </p>
-          
-        </div>
-        <div style={{ flex: 1, justifyContent: "center", display: "flex" }}>
-          <img
             src={img4}
             style={{
-              padding: "40px",
+              padding: "20px",
             }}
           />
         </div>

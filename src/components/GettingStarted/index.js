@@ -49,10 +49,10 @@ const GettingStared = () => {
               cursor: "pointer",
             }}
             onClick={() => {
-              window.location.href = "/contact";
+              window.location.href = "https://tally.so/r/wvejQX";
             }}
           >
-            Schedule
+            Get started
           </div>
         </div>
         <div
@@ -64,16 +64,15 @@ const GettingStared = () => {
             position: "relative",
           }}
         >
-          <p style={{ fontSize: "20px", fontWeight: 600 }}>Read docs</p>
+          <p style={{ fontSize: "20px", fontWeight: 600 }}>Ontology missing?</p>
           <p className="readdocs-text">
-            Explore and get comfortable with the important components of the
-            platform
+            Tell us more! EinMind's proprietary algorithms are thoughtfully crafted to seamlessly align with any ontology.
           </p>
 
           <img
             src={arrowRight}
             onClick={() => {
-              window.location.href = "https://docs.einmind.com";
+              window.location.href = "https://tally.so/r/wvejQX";
             }}
             style={{ height: "40px", cursor: "pointer" }}
           />

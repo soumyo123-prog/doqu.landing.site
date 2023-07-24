@@ -75,7 +75,7 @@ body {
 }
 
 .features-section div img {
-  max-width: min(450px, 100%) !important;
+  max-width: min(500px, 100%) !important;
 }
 
 .red-square {
@@ -111,12 +111,30 @@ body {
   text-align: left;
   width: 90px;
   border: 1px solid #438f9d;
-  border-radius: 2px;
+  border-radius: 8px;
   padding: 8px 10px;
   box-sizing: border-box;
 }
 
 .supports-card > div > div {
+  margin: 0 !important;
+}
+
+.supports-card2 {
+  grid-template-columns: auto auto auto;
+}
+
+.supports-card2 > span {
+  margin: 0 !important;
+  color: #438f9d;
+  align-items: center;
+  border: 1px solid #438f9d;
+  border-radius: 15px;
+  padding: 8px 10px;
+  box-sizing: border-box;
+}
+
+.supports-card2 > div > div {
   margin: 0 !important;
 }
 

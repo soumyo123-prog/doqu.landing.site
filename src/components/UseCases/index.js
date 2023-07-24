@@ -2,12 +2,12 @@ import React from "react";
 
 import bg from "../../../static/img/usecasesbg.png";
 
-import useC1 from "../../../static/img/useC1.png";
-import useC2 from "../../../static/img/useC2.png";
-import useC3 from "../../../static/img/useC3.png";
-import useC4 from "../../../static/img/useC4.png";
-import useC5 from "../../../static/img/useC5.png";
-import useC6 from "../../../static/img/useC6.png";
+import useC1 from "../../../static/img/use-case-automated.png";
+import useC2 from "../../../static/img/use-case-standard.png";
+import useC3 from "../../../static/img/use-case-fraud.png";
+import useC4 from "../../../static/img/use-case-vigilance.png";
+import useC5 from "../../../static/img/use-case-analytics.png";
+import useC6 from "../../../static/img/use-case-insight.png";
 
 const UseCaseCard = ({ label, img }) => {
   return (
@@ -22,7 +22,7 @@ const UseCaseCard = ({ label, img }) => {
       <div
         style={{
           backgroundColor: "white",
-          width: "200px",
+          width: "230px",
           height: "140px",
           display: "flex",
           flexDirection: "column",
@@ -31,9 +31,9 @@ const UseCaseCard = ({ label, img }) => {
           borderRadius: "10px",
         }}
       >
-        <p style={{ margin: 0, fontWeight: "bold" }}>{label}</p>
+        <p style={{ margin: 0, fontWeight: "bold", textAlign: "center", paddingLeft: "5px", paddingRight: "5px" }}>{label}</p>
 
-        <img src={img} style={{ height: "90px" }} />
+        <img src={img} style={{ height: "60px" }} />
       </div>
     </div>
   );
@@ -58,12 +58,12 @@ const UseCases = () => {
       </p>
 
       <div className="usecases-grid">
-        <UseCaseCard label="Specific Datapoint" img={useC1} />
-        <UseCaseCard label="Dataset" img={useC2} />
-        <UseCaseCard label="Classify" img={useC3} />
-        <UseCaseCard label="Multi-Label" img={useC4} />
-        <UseCaseCard label="Named Entities" img={useC5} />
-        <UseCaseCard label="PDF Segmentation" img={useC6} />
+        <UseCaseCard label="Automated Medical Coding" img={useC1} />
+        <UseCaseCard label="Data Standardization" img={useC2} />
+        <UseCaseCard label="Fraud Detection" img={useC3} />
+        <UseCaseCard label="Pharmacovigilance" img={useC4} />
+        <UseCaseCard label="Drug Intelligence" img={useC5} />
+        <UseCaseCard label="Analytics and Insights" img={useC6} />
       </div>
     </div>
   );

@@ -25,24 +25,12 @@ const MainSection = () => {
             margin: 0,
             marginBottom: "50px",
           }}
-        >
-          <span style={{ color: "#438F9D" }}>One</span> platform to access hundreds of <span style={{ color: "#438F9D" }}>AI</span> apps
-          {/* Visualize & Verify
-          <br />
-          <span style={{ color: "#438F9D" }}>AI</span> Predictions */}
-
-          {/* A <span style={{ color: "#438F9D" }}>unified interface</span> 
-          <br />
-          to instantly share and access AI models. */}
-          {/* <br />
-          <span style={{ color: "#438F9D" }}>AI</span> Predictions */}
-
-        </p>  
-        {/* <p className="header-main-caption" style={{ fontWeight: 500, fontSize: '20px'}}>                    
-          EinMind provides a rich AI app store and a powerful interface to build <br/>complex AI powered data extraction pipelines.
-        </p> */}
-        <p className="header-main-caption" style={{ fontWeight: 500, fontSize: '20px'}}>                    
-        PDF Extraction | Computer Vision | Large Language Models | Natural Language Processing | Audio Processing | Video Processing
+        >          
+          Streamlining Healthcare <br/>
+          Data Extraction and Coding
+          </p>
+        <p className="header-main-caption" style={{ fontWeight: 500, fontSize: '20px'}}>          
+          Intelligent data extraction and automation tools built for healthcare and research
         </p>
       </div>
 
@@ -125,12 +113,7 @@ const MainSection = () => {
               color: "white",
             }}
           >
-            One Platform,
-            <br /> For Your
-            <br />
-            <span style={{ color: "#438F9D" }}> Entire</span>
-            <br />
-            <span style={{ color: "#438F9D" }}>AI Ecosystem</span>
+            Your <span style={{ color: "#438F9D" }}> Healthcare Data</span> Co-Pilot
           </p>
           <p
             className="subheader-caption"
@@ -138,7 +121,7 @@ const MainSection = () => {
           >
             The most complete platform for unlocking the potential of
             <br />
-            teams that build AI powered data pipelines
+            healthcare data
           </p>
         </div>
       </div>
