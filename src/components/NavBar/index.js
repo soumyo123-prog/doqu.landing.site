@@ -18,6 +18,7 @@ const navItemsSmall = [
   { name: "Documentation", link: "https://docs.einmind.com", icon: docs },
   // { name: "Blogs", link: "/blog", icon: blogs },
   { name: "Contact", link: "/contact", icon: contact },
+  { name: "Login", link: "https://studio.einmind.com/" },
 ];
 
 const navMenuStyle = {

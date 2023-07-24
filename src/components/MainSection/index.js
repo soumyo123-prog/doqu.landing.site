@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
 import ecoBg from "../../../static/img/ecoBg.png";
 
 const MainSection = () => {
+  const videoRef = useRef(undefined);
+  useEffect(() => {
+    videoRef.current.defaultMuted = true;
+  });
   return (
     <div style={{ position: "relative" }}>
       <div
@@ -128,9 +132,14 @@ const MainSection = () => {
 
       <video
         src="https://d259fuf47d0c5i.cloudfront.net/doqu-resources/landing-site/network-video-2-comp.mp4"
+        typeof="video/mp4"
+        ref={videoRef}
         autoPlay
         muted
         loop
+        playsInline
+        preload="auto"
+        className="video-bg"
         style={{
           position: "absolute",
           top: 0,
