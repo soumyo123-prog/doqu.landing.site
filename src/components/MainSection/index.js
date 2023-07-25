@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 
 import ecoBg from "../../../static/img/ecoBg.png";
+import bgAnimation from "../../../static/img/network-video-2-comp.mp4";
 
 const MainSection = () => {
   const videoRef = useRef(undefined);
@@ -131,7 +132,8 @@ const MainSection = () => {
       </div>
 
       <video
-        src="https://d259fuf47d0c5i.cloudfront.net/doqu-resources/landing-site/network-video-2-comp.mp4"
+        //src="https://d259fuf47d0c5i.cloudfront.net/doqu-resources/landing-site/network-video-2-comp.mp4"
+        src={bgAnimation}
         typeof="video/mp4"
         ref={videoRef}
         autoPlay
