@@ -151,11 +151,15 @@ const Features = () => {
               &nbsp;&nbsp; <RedSquare />
             </div>
           </div>
-          <p style={{ lineHeight: "24px" }}>                        
-          Experience the power of AI with EinMind's advanced medical term coding applications. Our intuitive, cutting-edge platform seamlessly translates complex medical terms into widely accepted ontologies such as ICD-9-CM, ICD-10-CM, MedDRA, ATC, SNOMED CT, RxNORM and more. With our tools, enjoy unprecedented accuracy and control with every mapping step being visible and manageable. 
-            
+          <p style={{ lineHeight: "24px", margin: "1rem 0" }}>
+            Experience the power of AI with EinMind's advanced medical term
+            coding applications. Our intuitive, cutting-edge platform seamlessly
+            translates complex medical terms into widely accepted ontologies
+            such as ICD-9-CM, ICD-10-CM, MedDRA, ATC, SNOMED CT, RxNORM and
+            more. With our tools, enjoy unprecedented accuracy and control with
+            every mapping step being visible and manageable.
           </p>
-          
+
           <div
             style={{
               boxShadow: "0px 0px 2px 2px rgba(0, 0, 0, 0.25)",
@@ -176,30 +180,16 @@ const Features = () => {
                 marginTop: "10px",
               }}
             >
-              <span>                
-                ICD-9-CM Coding
-              </span>
-              <span>
-                ICD-10-CM Coding                
-              </span>
-              <span>
-                ICD-10-PCS Coding                
-              </span>
-              <span>
-                ICD-11 Coding
-              </span>
-              <span>                
-                MedDRA Coding
-              </span>
-              <span>                
-                ATC Coding
-              </span>
-              <span>                
-              CPT® Coding
-              </span>              
+              <span>ICD-9-CM Coding</span>
+              <span>ICD-10-CM Coding</span>
+              <span>ICD-10-PCS Coding</span>
+              <span>ICD-11 Coding</span>
+              <span>MedDRA Coding</span>
+              <span>ATC Coding</span>
+              <span>CPT® Coding</span>
             </div>
           </div>
-          
+
           {/* <div
             style={{
               boxShadow: "0px 0px 2px 2px rgba(0, 0, 0, 0.25)",
@@ -235,15 +225,31 @@ const Features = () => {
               ></div>
             </div>
           </div> */}
-
         </div>
-        <div style={{ flex: 1, justifyContent: "center", display: "flex" }}>
+        <div
+          style={{
+            flex: 1,
+            justifyContent: "center",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
           <img
             src={img_medical_coding}
             style={{
               padding: "20px",
             }}
           />
+          <div className="flex justify-center">
+            <button
+              className="btn btn-darkblue w-[10rem]"
+              onClick={() => {
+                window.location.href = "./medical-term-coding";
+              }}
+            >
+              Try now
+            </button>
+          </div>
         </div>
       </div>
 
@@ -266,10 +272,23 @@ const Features = () => {
               &nbsp;&nbsp; <RedSquare />
             </div>
           </div>
-          <p style={{ lineHeight: "24px" }}>
-          Discover EinMind's 'document coding' tool, an AI-powered marvel that swiftly extracts and suggests codes for medical terms. It simplifies the coding process by intelligently identifying medical entities in documents and offering code suggestions, turning complex medical data into valuable, code-rich data.
+          <p style={{ lineHeight: "24px", margin: "1rem 0"  }}>
+            Discover EinMind's 'document coding' tool, an AI-powered marvel that
+            swiftly extracts and suggests codes for medical terms. It simplifies
+            the coding process by intelligently identifying medical entities in
+            documents and offering code suggestions, turning complex medical
+            data into valuable, code-rich data.
           </p>
-          
+          <div className="flex justify-center mt-8">
+            <button
+              className="btn btn-darkblue w-[10rem]"
+              onClick={() => {
+                window.location.href = "./document-coding";
+              }}
+            >
+              Try now
+            </button>
+          </div>
         </div>
         <div style={{ flex: 1, justifyContent: "center", display: "flex" }}>
           <img
@@ -297,10 +316,14 @@ const Features = () => {
               &nbsp;&nbsp; <RedSquare />
             </div>
           </div>
-          <p style={{ lineHeight: "24px" }}>
-          Explore EinMind's comprehensive app store, designed to provide a one-stop solution for all your medical document pre-processing needs. Equipped with an array of innovative tools, our platform transforms the intricate task of preparing medical data into a streamlined, user-friendly process.          
+          <p style={{ lineHeight: "24px", margin: "1rem 0"  }}>
+            Explore EinMind's comprehensive app store, designed to provide a
+            one-stop solution for all your medical document pre-processing
+            needs. Equipped with an array of innovative tools, our platform
+            transforms the intricate task of preparing medical data into a
+            streamlined, user-friendly process.
           </p>
-          
+
           {/* <div
             style={{
               boxShadow: "0px 0px 2px 2px rgba(0, 0, 0, 0.25)",
@@ -331,7 +354,7 @@ const Features = () => {
             style={{
               padding: "20px",
             }}
-          />          
+          />
         </div>
       </div>
 
@@ -354,10 +377,13 @@ const Features = () => {
               &nbsp;&nbsp; <RedSquare />
             </div>
           </div>
-          <p style={{ lineHeight: "24px" }}>
-          Experience the ease of data extraction with EinMind's workflow builder. It enables users to design custom pipelines for complex scenarios without any coding. This intuitive tool turns complicated tasks into manageable processes, giving you control over your data extraction needs. Simplify your work with EinMind.
+          <p style={{ lineHeight: "24px", margin: "1rem 0"  }}>
+            Experience the ease of data extraction with EinMind's workflow
+            builder. It enables users to design custom pipelines for complex
+            scenarios without any coding. This intuitive tool turns complicated
+            tasks into manageable processes, giving you control over your data
+            extraction needs. Simplify your work with EinMind.
           </p>
-
 
           <div
             style={{
@@ -369,7 +395,7 @@ const Features = () => {
               maxWidth: "400px",
             }}
           >
-            Extract values from unstructured data such as 
+            Extract values from unstructured data such as
             <div
               className="supports-card"
               style={{
@@ -464,7 +490,6 @@ const Features = () => {
               </div>
             </div>
           </div>
-          
         </div>
         <div style={{ flex: 1, justifyContent: "center", display: "flex" }}>
           <img

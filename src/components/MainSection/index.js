@@ -30,13 +30,36 @@ const MainSection = () => {
             margin: 0,
             marginBottom: "50px",
           }}
-        >          
-          Streamlining Healthcare <br/>
+        >
+          Streamlining Healthcare <br />
           Data Extraction and Coding
-          </p>
-        <p className="header-main-caption" style={{ fontWeight: 500, fontSize: '20px'}}>          
-          Intelligent data extraction and automation tools built for healthcare and research
         </p>
+        <p
+          className="header-main-caption"
+          style={{ fontWeight: 500, fontSize: "20px" }}
+        >
+          Intelligent data extraction and automation tools built for healthcare
+          and research
+        </p>
+        <div className="flex flex-col">
+          <div className="mt-6 font-medium text-lg">Try now</div>
+          <button
+            className="btn btn-darkblue pill my-2"
+            onClick={() => {
+              window.location.href = "./medical-term-coding";
+            }}
+          >
+            Medical Term Coding {">"}
+          </button>
+          <button
+            className="btn btn-darkblue pill my-2"
+            onClick={() => {
+              window.location.href = "./document-coding";
+            }}
+          >
+            Document Coding {">"}
+          </button>
+        </div>
       </div>
 
       <div style={{ position: "relative" }}>
@@ -118,7 +141,8 @@ const MainSection = () => {
               color: "white",
             }}
           >
-            Your <span style={{ color: "#438F9D" }}> Healthcare Data</span> Co-Pilot
+            Your <span style={{ color: "#438F9D" }}> Healthcare Data</span>{" "}
+            Co-Pilot
           </p>
           <p
             className="subheader-caption"
