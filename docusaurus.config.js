@@ -1,35 +1,53 @@
+require('dotenv').config()
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'EinMind',
-  tagline: 'Single gateway to create AI powered data extraction pipelines',
-  url: 'https://einmind.com',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  plugins: [
+    async function myPlugin(context, options) {
+      return {
+        name: "docusaurus-tailwindcss",
+        configurePostCss(postcssOptions) {
+          // Appends TailwindCSS and AutoPrefixer.
+          postcssOptions.plugins.push(require("tailwindcss"));
+          postcssOptions.plugins.push(require("autoprefixer"));
+          return postcssOptions;
+        },
+      };
+    },
+  ],
+  title: "EinMind",
+  tagline: "Single gateway to create AI powered data extraction pipelines",
+  url: "https://einmind.com",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
+  customFields: {
+    // Put your custom environment here
+    BASE_API_URL: process.env.BASE_API_URL,
+  },
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'EinMind', // Usually your GitHub org/user name.
-  projectName: 'einmind.landing.site', // Usually your repo name.
+  organizationName: "EinMind", // Usually your GitHub org/user name.
+  projectName: "einmind.landing.site", // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: false,
@@ -48,7 +66,7 @@ const config = {
         //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         // },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
@@ -58,10 +76,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'EinMind',
+        title: "EinMind",
         logo: {
-          alt: 'EinMind Logo',
-          src: 'img/alchemia-logo.png',
+          alt: "EinMind Logo",
+          src: "img/alchemia-logo.png",
         },
         items: [
           // {
@@ -74,9 +92,8 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
-        links: [
-        ],
+        style: "dark",
+        links: [],
         copyright: `Copyright © ${new Date().getFullYear()} EinMind.`,
       },
       prism: {
