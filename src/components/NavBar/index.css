@@ -1,0 +1,35 @@
+.header {
+  /* background-color: #01354b; */
+  background-color: white;
+  border-bottom: 1px solid #dae7f2;
+  font-size: 0.85rem;
+  letter-spacing: 0.085rem;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.header * {
+  font-family: "Inter", sans-serif;
+}
+.header-logo {
+  height: 1.8rem;
+}
+.header .logo-text {
+  font-size: 1.17rem;
+  font-weight: bold;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin: 0;
+  color: #428f9e;
+}
+.header-tab {
+  padding: 0.25rem 0.5rem;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.active.header-tab {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+}

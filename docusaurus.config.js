@@ -30,6 +30,7 @@ const config = {
   customFields: {
     // Put your custom environment here
     BASE_API_URL: process.env.BASE_API_URL,
+    BASE_URL: process.env.BASE_URL
   },
 
   // GitHub pages deployment config.

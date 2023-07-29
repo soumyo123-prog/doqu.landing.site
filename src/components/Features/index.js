@@ -66,11 +66,11 @@ const Features = () => {
         style={{
           position: "sticky",
           zIndex: 999,
-          top: "63px",
+          top: "53px",
           height: "45px",
           justifyContent: "center",
           alignItems: "center",
-          border: "1px solid #D5D1D1",
+          border: "1px solid #dae7f2",
           backgroundColor: "white",
         }}
       >

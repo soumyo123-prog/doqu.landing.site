@@ -13,7 +13,7 @@ const MainSection = () => {
       <div
         style={{
           textAlign: "center",
-          height: "calc(100vh - 63px)",
+          height: "100vh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",

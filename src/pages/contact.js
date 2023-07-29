@@ -9,9 +9,8 @@ export default function Contact() {
   const formRef = useRef(null);
 
   return (
-    <div>
+    <>
       <NavBar />
-      <div style={{ height: "63px" }}></div>
       <iframe
         ref={formRef}
         src="https://docs.google.com/forms/d/e/1FAIpQLScFOHIJbQCYpA06fvuVgiCIjSnpthFSeNVWR1aTokWTk3Le4w/viewform?embedded=true"
@@ -21,13 +20,13 @@ export default function Contact() {
         style={{
           height: "1000px",
           width: "100%",
-          marginTop: "40px",
+          margin: "10vh",
           overflow: "hidden",
         }}
       >
         Loading…
       </iframe>
       <Footer />
-    </div>
+    </>
   );
 }

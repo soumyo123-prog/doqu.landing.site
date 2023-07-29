@@ -13,7 +13,6 @@ export default function Home() {
   return (
     <div>
       <NavBar />
-      <div style={{ height: "63px" }}></div>
       <MainSection />
       <Features />
       <UseCases />
