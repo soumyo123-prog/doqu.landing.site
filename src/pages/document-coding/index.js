@@ -1,9 +1,16 @@
 import React, { useEffect, useState } from "react";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import NavBar from "../../components/NavBar";
 import SampleDocs from "../../components/data/sample_docs.json";
+import axios from "axios";
 // import ReCAPTCHA from "react-google-recaptcha";
+import "../public_apps.css"
 
-export default function MedicalTermCoders() {
+export default function DocumentCoding() {
+  const {
+    siteConfig: { customFields },
+  } = useDocusaurusContext();
+
   // function onChange(value) {
   //   console.log("Captcha value:", value);
   // }
@@ -14,21 +21,28 @@ export default function MedicalTermCoders() {
   const [encoderSample, setEncoderSample] = useState("");
   const [content, setContent] = useState("");
 
-  const [predictions, setPredictions] = useState([]);
-  const getPredictions = () => {
-    setPredictions([1, 2]);
-    setDisabBtn(true);
+  const [predictions, setPredictions] = useState(null);
+  const getPredictions = async () => {
+    try {
+      const { data } = await axios.get(
+        `${customFields.BASE_API_URL}/encoders/document_coding/get_document_codes?doc=${content}&ontology=${encoder}`
+      );
+      setPredictions(data);
+      setDisabBtn(true);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
     setEncoderSample(Object.keys(SampleDocs[encoder])[0]);
     setDisabBtn(false);
-    setPredictions([]);
+    setPredictions(null);
   }, [encoder]);
   useEffect(() => {
     setContent(SampleDocs[encoder][encoderSample]);
     setDisabBtn(false);
-    setPredictions([]);
+    setPredictions(null);
   }, [encoderSample]);
 
   return (
@@ -74,11 +88,11 @@ export default function MedicalTermCoders() {
               disabled
             />
           </div>
-          <div className="flex gap-4 items-center justify-between">
-            <span>
-              {/* <ReCAPTCHA sitekey="Your client site key" onChange={onChange} /> */}
+          <div className="flex gap-4 items-center justify-end">
+            {/* <span>
+              <ReCAPTCHA sitekey="Your client site key" onChange={onChange} />
               reCAPTCHA
-            </span>
+            </span> */}
             <button
               className="btn btn-primary"
               disabled={disabBtn}
@@ -89,25 +103,27 @@ export default function MedicalTermCoders() {
           </div>
         </div>
         <div className="w-1/2 bg-white border-theme rounded">
-          {predictions.length === 0 ? (
+          {predictions === null ? (
             <div className="flex justify-center items-center text-desc h-full">
               Predictions will be displayed here
             </div>
           ) : (
-            <table className="h-full w-full">
+            <table className="h-full w-full enc-table">
               <thead>
-                <th>Mention</th>
-                <th>Class</th>
-                <th>Code</th>
-                <th>Score</th>
+                <tr>
+                  <th>Code Title</th>
+                  <th>Code</th>
+                  <th>Score</th>
+                </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>test</td>
-                  <td>ssalc</td>
-                  <td>edoc</td>
-                  <td>erocs</td>
-                </tr>
+                {predictions.codes.map((code) => (
+                  <tr key={code.code}>
+                    <td>{code.code_title}</td>
+                    <td>{code.code}</td>
+                    <td>{code.score}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           )}
