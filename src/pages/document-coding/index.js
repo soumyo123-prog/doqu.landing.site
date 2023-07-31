@@ -47,7 +47,7 @@ export default function DocumentCoding() {
 
   return (
     <>
-      <NavBar activeTab={"clinical_document"} />
+      <NavBar activeTab={"document-coding"} />
       <div
         className="px-8 py-4 flex gap-4 page-template"
         style={{ height: "calc(100vh - 3.3rem)" }}

@@ -2,16 +2,16 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "@docusaurus/router";
 import NavBar from "../../components/NavBar";
 // import axios from "axios";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+// import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import DocusaurusLogoWithKeytar from "@site/static/img/Dummy.svg";
 import truncateString from "../../components/utils/truncateString";
 import "../public_apps.css";
 
-const ClinicalTermHome = () => {
+const MedicalTermCoding = () => {
   const location = useLocation();
-  const {
-    siteConfig: { customFields },
-  } = useDocusaurusContext();
+  // const {
+  //   siteConfig: { customFields },
+  // } = useDocusaurusContext();
   // const [apps, setApps] = useState([]);
   // const getEncoderApps = async () => {
   //   try {
@@ -40,12 +40,12 @@ const ClinicalTermHome = () => {
         "Automatically extract ATC codes for signs and symptom terms",
     },
     {
-      encoder_app_id: "icd10cm",
+      encoder_app_id: "icd-10-cm",
       name: "ICD-10-CM",
       description: "Automatically extract ICD-10-CM codes for diagnosis terms",
     },
     {
-      encoder_app_id: "icd9cm",
+      encoder_app_id: "icd-9-cm",
       name: "ICD-9-CM",
       description: "Automatically extract ICD-9-CM codes for diagnosis terms",
     },
@@ -67,7 +67,7 @@ const ClinicalTermHome = () => {
   ];
   return (
     <>
-      <NavBar activeTab={"clinical_term"} />
+      <NavBar activeTab={"medical-term-coding"} />
       <div className="px-32 py-4 page-template">
         <h2 className="w-2/3 mx-auto text-center">
           Explore the Future of Clinical Coding with Our AI-Powered Apps
@@ -115,4 +115,4 @@ const ClinicalTermHome = () => {
     </>
   );
 };
-export default ClinicalTermHome;
+export default MedicalTermCoding;
