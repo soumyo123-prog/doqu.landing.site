@@ -1,0 +1,52 @@
+.pagination {
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #39465e;
+}
+.pagination .arrow {
+  height: 1.4rem;
+}
+.pagination.sm {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 0.85rem;
+}
+.pagination.md {
+  padding-top: 0.25rem 0;
+  /* padding-bottom: 0; */
+  font-size: 0.95rem;
+}
+.pagination > span {
+  cursor: pointer;
+  padding: 0.75rem;
+}
+.pagination.sm > span {
+  cursor: pointer;
+  padding: 0.15rem 0.25rem;
+  margin: 0 0.1rem;
+}
+.pagination.md > span {
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  margin: 0 0.2rem;
+}
+.pagination .disabled {
+  cursor: default;
+}
+.pagination .active {
+  background-color: white;
+  border-radius: 0.4rem;
+  padding: 0.15rem 0.65rem;
+}
+.pagination.on-white-bg .active {
+  background-color: darkgrey;
+  color: white;
+}
+.pagination.sm .active {
+  padding: 0rem 0.3rem;
+}
+.pagination.md .active {
+  padding: 0rem 0.5rem;
+}
