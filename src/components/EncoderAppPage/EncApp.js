@@ -206,16 +206,22 @@ export default function EncoderPage() {
             className="overflow-y-auto"
             style={{ height: "calc(100vh - 11.5rem)" }}
           >
-            {appNodes.map((node) => (
-              <EncNode
-                key={node.node_id}
-                node={node}
-                expandedNodes={expandedNodes}
-                setExpandedNodes={setExpandedNodes}
-                getChildrenNodes={getChildrenNodes}
-                expansionLoading={expansionLoading}
-              />
-            ))}
+            {appNodes.length > 0 ? (
+              appNodes.map((node) => (
+                <EncNode
+                  key={node.node_id}
+                  node={node}
+                  expandedNodes={expandedNodes}
+                  setExpandedNodes={setExpandedNodes}
+                  getChildrenNodes={getChildrenNodes}
+                  expansionLoading={expansionLoading}
+                />
+              ))
+            ) : (
+              <div className="flex justify-center items-center text-desc h-full">
+                Ontology data not available
+              </div>
+            )}
           </div>
         </div>
       </div>
