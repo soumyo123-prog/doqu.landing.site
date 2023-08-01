@@ -4,7 +4,7 @@ import NavBar from "../../components/NavBar";
 import SampleDocs from "../../components/data/sample_docs.json";
 import axios from "axios";
 // import ReCAPTCHA from "react-google-recaptcha";
-import "../public_apps.css"
+import "../public_apps.css";
 
 export default function DocumentCoding() {
   const {
@@ -108,7 +108,7 @@ export default function DocumentCoding() {
               Predictions will be displayed here
             </div>
           ) : (
-            <table className="h-full w-full enc-table">
+            <table className="enc-table">
               <thead>
                 <tr>
                   <th>Code Title</th>
@@ -117,13 +117,14 @@ export default function DocumentCoding() {
                 </tr>
               </thead>
               <tbody>
-                {predictions.codes.map((code) => (
-                  <tr key={code.code}>
-                    <td>{code.code_title}</td>
-                    <td>{code.code}</td>
-                    <td>{code.score}</td>
-                  </tr>
-                ))}
+                {predictions &&
+                  predictions.codes.map((code) => (
+                    <tr key={code.code}>
+                      <td>{code.code_title}</td>
+                      <td>{code.code}</td>
+                      <td>{code.score}</td>
+                    </tr>
+                  ))}
               </tbody>
             </table>
           )}
