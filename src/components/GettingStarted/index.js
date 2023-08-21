@@ -47,6 +47,7 @@ const GettingStared = () => {
               alignItems: "center",
               fontWeight: 600,
               cursor: "pointer",
+              marginTop: "20px",
             }}
             onClick={() => {
               window.location.href = "https://tally.so/r/wvejQX";

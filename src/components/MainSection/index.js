@@ -49,15 +49,15 @@ const MainSection = () => {
               window.location.href = "./medical-term-coding";
             }}
           >
-            Medical Term Coding {">"}
+            &#xbb;  Medical Term Coding
           </button>
           <button
             className="btn btn-darkblue pill my-2"
             onClick={() => {
-              window.location.href = "./document-coding";
+              window.location.href = "./document-extraction";
             }}
           >
-            Document Coding {">"}
+            &#xbb;  Document Extraction
           </button>
         </div>
       </div>
@@ -141,7 +141,7 @@ const MainSection = () => {
               color: "white",
             }}
           >
-            Your <span style={{ color: "#438F9D" }}> Healthcare Data</span>{" "}
+            Your <span style={{ color: "#438F9D" }}> Medical Coding</span>{" "}
             Co-Pilot
           </p>
           <p

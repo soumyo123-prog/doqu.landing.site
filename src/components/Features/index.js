@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 
 import img_medical_coding from "../../../static/img/medical-coding-11.png";
-import img_document_coding from "../../../static/img/document-coding-3.png";
+import img_document_coding from "../../../static/img/document-coding-5.png";
 import img3 from "../../../static/img/app-store-7.png";
 import img4 from "../../../static/img/workflows-4.png";
 
@@ -108,7 +108,7 @@ const Features = () => {
               });
             }}
           >
-            Document Coding
+            Document Extraction
           </li>
           <li
             className={activeSection === 2 ? "activeTab" : "inactiveTab"}
@@ -152,41 +152,30 @@ const Features = () => {
             </div>
           </div>
           <p style={{ lineHeight: "24px", margin: "1rem 0" }}>
-            Experience the power of AI with EinMind's advanced medical term
-            coding applications. Our intuitive, cutting-edge platform seamlessly
-            translates complex medical terms into widely accepted ontologies
-            such as ICD-9-CM, ICD-10-CM, MedDRA, ATC, SNOMED CT, RxNORM and
-            more. With our tools, enjoy unprecedented accuracy and control with
-            every mapping step being visible and manageable.
+            Seamlessly translate complex medical terms to codes through AI Medical Autocoders.
           </p>
-
           <div
             style={{
-              boxShadow: "0px 0px 2px 2px rgba(0, 0, 0, 0.25)",
-              borderRadius: "10px",
-              padding: "18px",
-              fontSize: "12px",
-              color: "#776F6F",
+              fontSize: "16px",
+              //color: "#776F6F",
               maxWidth: "450px",
             }}
-          >
-            Currently supported medical ontologies:
+          >    
             <div
               className="supports-card2"
-              style={{
-                display: "grid",
-                rowGap: "10px",
-                columnGap: "10px",
+              style={{                                
                 marginTop: "10px",
+                fontSize: "14px",
+                textAlign: "left",
               }}
             >
-              <span>ICD-9-CM Coding</span>
-              <span>ICD-10-CM Coding</span>
-              <span>ICD-10-PCS Coding</span>
-              <span>ICD-11 Coding</span>
-              <span>MedDRA Coding</span>
-              <span>ATC Coding</span>
-              <span>CPT® Coding</span>
+              <span><a href="/medical-term-coding/meddra-coder">&#xbb; <b>MedDRA Coding</b>: map adverse event terms</a></span> <br/><br/>
+              <span><a href="/medical-term-coding/icd-10-cm-coder">&#xbb; <b>ICD-10-CM Coding</b>: map diagnosis terms</a></span> <br/><br/>
+              <span><a href="/medical-term-coding/icd-11-coder">&#xbb; <b>ICD-11 Coding</b>: map diagnosis terms</a></span> <br/><br/>
+              <span><a href="/medical-term-coding/cpt-coder">&#xbb; <b>CPT® Coding</b>: map medical procedures</a></span> <br/><br/>
+              <span><a href="/medical-term-coding/atc-coder">&#xbb; <b>ATC Coding</b>: map drugs and medications</a></span> <br/><br/>
+              <span><a href="/medical-term-coding/snomed-coder">&#xbb; <b>SNOMED Coding</b>: map medical terms</a></span> <br/><br/>
+              <span><a href="/medical-term-coding/mesh-coder">&#xbb; <b>MeSH Coding</b>: map medical terms</a></span> <br/><br/>
             </div>
           </div>
 
@@ -237,19 +226,9 @@ const Features = () => {
           <img
             src={img_medical_coding}
             style={{
-              padding: "20px",
+              padding: "0px",
             }}
           />
-          <div className="flex justify-center">
-            <button
-              className="btn btn-darkblue w-[10rem]"
-              onClick={() => {
-                window.location.href = "./medical-term-coding";
-              }}
-            >
-              Try now
-            </button>
-          </div>
         </div>
       </div>
 
@@ -267,7 +246,7 @@ const Features = () => {
               marginBottom: "10px",
             }}
           >
-            Document Coding
+            Document Extraction
             <div className="red-square">
               &nbsp;&nbsp; <RedSquare />
             </div>
@@ -279,15 +258,35 @@ const Features = () => {
             documents and offering code suggestions, turning complex medical
             data into valuable, code-rich data.
           </p>
-          <div className="flex justify-center mt-8">
-            <button
-              className="btn btn-darkblue w-[10rem]"
-              onClick={() => {
-                window.location.href = "./document-coding";
+          <div
+            style={{              
+              padding: "18px",
+              fontSize: "16px",
+              //color: "#776F6F",
+              maxWidth: "450px",
+              textAlign: "center"
+            }}
+          >     
+          <p style={{
+              fontWeight: "bold",
+              textAlign: "left"
+            }}>Try now:</p>
+
+            <div
+              className="supports-card2"
+              style={{
+                rowGap: "10px",
+                columnGap: "10px",
+                marginTop: "20px",
+                fontSize: "14px",
+                textAlign: "left",
               }}
             >
-              Try now
-            </button>
+              <span><a href="/medical-term-coding/meddra-coder">&#xbb; Extract adverse event MedDRA codes from documents</a></span><br/><br/>
+              <span><a href="/medical-term-coding/icd-10-cm-coder">&#xbb; Extract diagnosis (ICD-10-CM) and procedure (ICD-10-PCS) codes from documents</a></span><br/><br/>
+              <span><a href="/medical-term-coding/icd-11-coder">&#xbb; Extract diagnosis (ICD-10-CM) and procedure (CPT) codes from documents</a></span><br/><br/>
+              <span><a href="/medical-term-coding/cpt-coder">&#xbb; Extract drug and medication ATC codes from documents</a></span>
+            </div>
           </div>
         </div>
         <div style={{ flex: 1, justifyContent: "center", display: "flex" }}>

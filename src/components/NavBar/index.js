@@ -14,8 +14,8 @@ const index = ({ activeTab }) => {
       tab: "medical-term-coding",
     },
     {
-      name: "Document Coding",
-      tab: "document-coding",
+      name: "Document Extraction",
+      tab: "document-extraction",
     },
   ];
   return (
@@ -42,10 +42,10 @@ const index = ({ activeTab }) => {
         <span
           className="header-tab"
           onClick={() =>
-            (window.location.href = `${customFields.BASE_URL}/login`)
+            (window.location.href = `https://tally.so/r/wvejQX`)
           }
         >
-          Getting started
+          Get started
         </span>
       </div>
     </div>

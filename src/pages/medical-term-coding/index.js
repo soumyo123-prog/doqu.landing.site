@@ -31,39 +31,39 @@ const MedicalTermCoding = () => {
       encoder_app_id: "meddra",
       name: "MedDRA",
       description:
-        "Automatically extract MedDRA codes for signs and symptom terms",
+        "Automatically map adverse events to MedDRA codes",
+    },
+    {
+      encoder_app_id: "icd-10-cm",
+      name: "ICD-10-CM",
+      description: "Automatically map diagnosis terms to ICD-10-CM codes for ",
+    },
+    {
+      encoder_app_id: "icd-11",
+      name: "ICD-11",
+      description: "Automatically map diagnosis terms to ICD-11 codes",
+    },
+    {
+      encoder_app_id: "cpt",
+      name: "CPT",
+      description: "Automatically map medical procedures and treatments to CPT codes",
     },
     {
       encoder_app_id: "atc",
       name: "ATC",
       description:
-        "Automatically extract ATC codes for signs and symptom terms",
-    },
+        "Automatically extract ATC codes for drugs and medications",
+    },    
     {
-      encoder_app_id: "icd-10-cm",
-      name: "ICD-10-CM",
-      description: "Automatically extract ICD-10-CM codes for diagnosis terms",
-    },
-    {
-      encoder_app_id: "icd-9-cm",
-      name: "ICD-9-CM",
-      description: "Automatically extract ICD-9-CM codes for diagnosis terms",
-    },
-    {
-      encoder_app_id: "rxnorm",
-      name: "RxNORM",
-      description: "Automatically extract RxNORM codes for diagnosis terms",
+      encoder_app_id: "snomed",
+      name: "SNOMED",
+      description: "Automatically map medical terms to SNOMED codes",
     },
     {
       encoder_app_id: "mesh",
       name: "MeSH",
-      description: "Automatically extract MeSH codes for diagnosis terms",
-    },
-    {
-      encoder_app_id: "snomed",
-      name: "SnoMED",
-      description: "Automatically extract SnoMED codes for diagnosis terms",
-    },
+      description: "Automatically map medical terms to MeSH ontology codes",
+    },    
   ];
   return (
     <>

@@ -1,12 +1,51 @@
 {
-  "meddra": {
-    "sample meddra doc 1": "Lorem 1 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "sample meddra doc 2": "Lorem 2 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "sample meddra doc 3": "Lorem 3 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  
+  "adverse-event-coding": {
+    "title": "Adverse event coding with MedDRA",
+    "cases": [
+      {
+        "case_id": "case_1",
+        "case_title": "sample case 1",
+        "case_description": "Pt was admitted to emergency, could not fully emote, obsrvd facial sagging and weakness. \nPt lost taste on one side of her tongue, felt pain behind their left eye and right ear."
+      }
+    ]
   },
-  "icd-10-cm": {
-    "sample icd-10-cm doc 1": "Lorem 1 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "sample icd-10-cm doc 2": "Lorem 2 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "sample icd-10-cm doc 3": "Lorem 3 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+  "diagnosis-and-procedure-coding-event-pcs": {
+    "title": "Diagnosis and procedure coding with ICD-10-CM/PCS",
+    "cases": [
+      {
+        "case_id": "case_1",
+        "case_title": "sample case 1",
+        "case_description": "A patient was hospitalized due to potential colon carcinoma. \nAn exploratory laparotomy was conducted, revealing a prominent mass in the sigmoid colon. This section of the colon was then removed, and an end-to-end anastomosis was completed. During the operation, tiny nodules were observed on the liver, prompting a needle biopsy. The subsequent pathology report verified the diagnosis as adenocarcinoma of the sigmoid colon with liver metastasis."
+      },
+      {
+        "case_id": "case_2",
+        "case_title": "sample case 2",
+        "case_description": "A patient who had undergone prostate surgery was released with a urethral catheter still inserted. He was later readmitted because of urinary sepsis caused by methicillin-resistant Staphylococcus aureus (MRSA), linked to the catheter. The doctor validated the sepsis diagnosis resulting from MRSA. The catheter was taken out, and the patient was initiated on antibiotics. After showing considerable improvement over a few days, the patient was sent home without a catheter."
+      }
+    ]
+  },
+  
+  "diagnosis-and-procedure-coding-event-cpt": {
+    "title": "Diagnosis and procedeure coding with ICD-10-CM and CPT",
+    "cases": [
+      {
+        "case_id": "case_1",
+        "case_title": "sample case 1",
+        "case_description": "PREOPERATIVE DIAGNOSIS: \nPrior history of polyps in the colon.\nPersistent constipation.\n\nPOSTOPERATIVE DIAGNOSIS:\n\nPresence of a single colon polyp.\nMinor diverticulosis in the sigmoid colon.\nPERFORMED PROCEDURE:\nColonoscopy accompanied by a biopsy.\n\nANESTHESIA:\nSupervision under anesthesia care.\n\nBLOOD LOSS ESTIMATION:\nInsignificant.\n\nCOMPLICATIONS:\nNone observed.\n\nCOLLECTED SPECIMEN:\nPolyp located at the 20 cm mark.\n\nREASON FOR PROCEDURE:\nA 68-year-old male, previously diagnosed with polyps and recent increased constipation, sought further assessment.\n\nPROCEDURE DETAILS:\nAfter informed consent was secured and the procedure's risks, benefits, and other options were discussed, the patient was prepped in the endoscopy room and positioned on his left side. Anesthesia care was administered. Once sedation reached desired levels, a manual rectal examination was done, revealing no detectable masses or external rectal issues. A lubricated endoscope was smoothly inserted and directed up to the cecum, confirmed by spotting the ileocecal valve and the opening to the appendix. A thorough check of the ascending, transverse, and descending parts of the colon was conducted in a reverse and encompassing manner. A singular small polyp was identified in the sigmoid colon and was safely excised using a cold biopsy technique. Additionally, slight diverticulosis was observed in the sigmoid region. No other irregularities were seen. A backward view within the rectal chamber disclosed no inner anomalies of the anal passage. Following the examination, the endoscope was carefully removed and the patient was moved to recovery."
+      }
+    ]
+  },
+
+  "drug-medication-coding-event-atc": {
+    "title": "Drug and medication coding with ATC",
+    "cases": [
+      {
+        "case_id": "case_1",
+        "case_title": "sample case 1",
+        "case_description": "Reason for Admission:\n\nAcute exacerbation of congestive heart failure.\nDiagnoses:\n\nCongestive heart failure.\nType 2 diabetes mellitus.\nHypertension.\nMedications on Discharge:\n\nFurosemide 40 mg daily.\nMetformin 500 mg twice daily.\nLisinopril 10 mg daily.\nRecommendations:\n\nFollow up with primary care physician in one week.\nMonitor blood glucose levels daily and report any significant changes.\nRestrict sodium intake and maintain a low-salt diet.\nBegin cardiac rehabilitation as recommended."
+      }
+    ]
   }
 }

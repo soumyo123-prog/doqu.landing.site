@@ -1,5 +1,9 @@
-{
-  "meddra": [
+import React from 'react'
+import EncMeddraApp from "../../components/EncoderAppPage/EncMeddraApp"
+import "../public_apps.css";
+
+
+const terms = [
     {
       "term": "Painful sensation in a lymph node",
       "mappings": [
@@ -46,7 +50,7 @@
     },
 
     {
-      "term": "Bleeding in or from the stomach",
+      "term": "bleeding in the stomach",
       "mappings": [
         {
           "Level": "LLT (Level 5)",
@@ -55,15 +59,13 @@
         }
       ]
     }
-  ],
-
-  
-
-  "icd-10-cm": [
-    "sample icd-10-cm term 1",
-    "sample icd-10-cm term 2",
-    "sample icd-10-cm term 3"
   ]
 
-  
+
+const MEDDRA = () => {
+  return (
+    <EncMeddraApp />
+  )
 }
+
+export default MEDDRA

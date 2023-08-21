@@ -128,9 +128,7 @@ body {
   margin: 0 !important;
   color: #438f9d;
   align-items: center;
-  border: 1px solid #438f9d;
-  border-radius: 15px;
-  padding: 8px 10px;
+  /* border: 1px solid #438f9d; */
   box-sizing: border-box;
 }
 
