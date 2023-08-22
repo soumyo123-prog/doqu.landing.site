@@ -58,7 +58,7 @@ const MedicalTermCodingMenu = () => {
                 <FaMapMarkerAlt className="w-8 h-8" />
               </div>
               <div className="ml-4">
-                <p className="text-sm font-semibold text-gray-900">
+                <p className="text-xs font-semibold text-gray-900">
                   {menuItem.name}
                 </p>
                 <p className="text-xs text-gray-500">{menuItem.description}</p>

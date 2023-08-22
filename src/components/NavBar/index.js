@@ -4,6 +4,7 @@ import logo from "./favicon.ico";
 import "./index.css";
 import { FaAngleDown } from "react-icons/fa";
 import MedicalTermCodingMenu from "../MedicalTermCodingMenu";
+import DocumentExtractionMenu from "../DocumentExtractionMenu";
 
 const index = () => {
   const {
@@ -64,10 +65,7 @@ const index = () => {
           }
           onMouseLeave={handleMenuMouseLeave}
         >
-          <button
-            className="flex flex-row items-center hover:text-indigo-500"
-            onClick={() => (window.location.href = "/document-extraction")}
-          >
+          <button className="flex flex-row items-center hover:text-indigo-500">
             <span className="mr-1">{menuNames.document_extraction}</span>
             <FaAngleDown
               className={`transition-transform ${
@@ -77,9 +75,9 @@ const index = () => {
               }`}
             />
           </button>
-          {/* {openMenu === menuNames.document_extraction && (
-            <MedicalTermCodingMenu />
-          )} */}
+          {openMenu === menuNames.document_extraction && (
+            <DocumentExtractionMenu />
+          )}
         </li>
         <span
           className="header-tab"
