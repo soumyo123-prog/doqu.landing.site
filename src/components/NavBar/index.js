@@ -3,40 +3,24 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import logo from "./favicon.ico";
 import "./index.css";
 import { FaAngleDown } from "react-icons/fa";
+import MedicalTermCodingMenu from "../MedicalTermCodingMenu";
 
-const index = ({ activeTab }) => {
+const index = () => {
   const {
     siteConfig: { customFields },
   } = useDocusaurusContext();
 
-  const tabs = [
-    {
-      name: "Medical Term Coding",
-      tab: "medical-term-coding",
-    },
-    {
-      name: "Document Extraction",
-      tab: "document-extraction",
-    },
-  ];
-
-  const dropdownData = [
-    {
-      title: "medical-term-coding",
-      submenu: ["Payment 1", "Payment 2", "Payment 3"],
-    },
-    {
-      title: "document-extraction",
-      submenu: ["Billing 1", "Billing 2", "Billing 3"],
-    },
-  ];
+  const menuNames = {
+    medical_term_coding: "Medical Term Coding",
+    document_extraction: "Document Extraction",
+  };
 
   const [openMenu, setOpenMenu] = useState(null);
   const timeoutRef = useRef(null);
 
-  const handleLinkMouseEnter = (index) => {
+  const handleLinkMouseEnter = (menuName) => {
     clearTimeout(timeoutRef.current);
-    setOpenMenu(index);
+    setOpenMenu(menuName);
   };
 
   const handleMenuMouseLeave = () => {
@@ -52,35 +36,51 @@ const index = ({ activeTab }) => {
         <h3 className="logo-text">EinMind</h3>
       </a>
       <ul className="px-8 flex items-center">
-        {tabs.map((tab, index) => (
-          <li
-            className="p-2 relative group"
-            onMouseEnter={() => handleLinkMouseEnter(index)}
-            onMouseLeave={handleMenuMouseLeave}
+        <li
+          className="p-2 relative group"
+          onMouseEnter={() =>
+            handleLinkMouseEnter(menuNames.medical_term_coding)
+          }
+          onMouseLeave={handleMenuMouseLeave}
+        >
+          <button className="flex flex-row items-center hover:text-indigo-500">
+            <span className="mr-1">{menuNames.medical_term_coding}</span>
+            <FaAngleDown
+              className={`transition-transform ${
+                openMenu === menuNames.medical_term_coding
+                  ? "transform rotate-180"
+                  : ""
+              }`}
+            />
+          </button>
+          {openMenu === menuNames.medical_term_coding && (
+            <MedicalTermCodingMenu />
+          )}
+        </li>
+        <li
+          className="p-2 relative group"
+          onMouseEnter={() =>
+            handleLinkMouseEnter(menuNames.document_extraction)
+          }
+          onMouseLeave={handleMenuMouseLeave}
+        >
+          <button
+            className="flex flex-row items-center hover:text-indigo-500"
+            onClick={() => (window.location.href = "/document-extraction")}
           >
-            <button className="flex flex-row items-center hover:text-indigo-500">
-              <span className="mr-1">{tab.name}</span>
-              <FaAngleDown
-                className={`transition-transform ${
-                  openMenu === index ? "transform rotate-180" : ""
-                }`}
-              />
-              {openMenu === index && (
-                <ul className="absolute left-0 top-5 mt-5 space-y-2 bg-white text-gray-900 border border-solid border-blue-500">
-                  {dropdownData[index].submenu.map(
-                    (submenuItem, submenuItemIndex) => {
-                      return (
-                        <li key={submenuItemIndex} className="px-4 py-2">
-                          {submenuItem}
-                        </li>
-                      );
-                    }
-                  )}
-                </ul>
-              )}
-            </button>
-          </li>
-        ))}
+            <span className="mr-1">{menuNames.document_extraction}</span>
+            <FaAngleDown
+              className={`transition-transform ${
+                openMenu === menuNames.document_extraction
+                  ? "transform rotate-180"
+                  : ""
+              }`}
+            />
+          </button>
+          {/* {openMenu === menuNames.document_extraction && (
+            <MedicalTermCodingMenu />
+          )} */}
+        </li>
         <span
           className="header-tab"
           onClick={() => (window.location.href = `https://tally.so/r/wvejQX`)}
