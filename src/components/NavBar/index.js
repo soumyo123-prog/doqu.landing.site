@@ -31,20 +31,22 @@ const index = () => {
   };
 
   return (
-    <div className="header flex items-center">
-      <a className="py-3 px-4 flex gap-2 items-center" href="/">
-        <img src={logo} alt="logo" className="header-logo" />
-        <h3 className="logo-text">EinMind</h3>
-      </a>
-      <ul className="px-8 flex items-center">
+    <div className="header flex">
+      <ul className="px-16 flex items-center w-full">
+        <li>
+          <a className="py-3 px-4 flex items-center" href="/">
+            <img src={logo} alt="logo" className="header-logo" />
+            <h3 className="logo-text">EinMind</h3>
+          </a>
+        </li>
         <li
-          className="p-2 relative group"
+          className="p-2 relative group h-full flex items-center mr-10 ml-10"
           onMouseEnter={() =>
             handleLinkMouseEnter(menuNames.medical_term_coding)
           }
           onMouseLeave={handleMenuMouseLeave}
         >
-          <button className="flex flex-row items-center hover:text-indigo-500">
+          <button className="flex flex-row items-center">
             <span className="mr-1">{menuNames.medical_term_coding}</span>
             <FaAngleDown
               className={`transition-transform ${
@@ -59,13 +61,13 @@ const index = () => {
           )}
         </li>
         <li
-          className="p-2 relative group"
+          className="p-2 relative group h-full flex items-center"
           onMouseEnter={() =>
             handleLinkMouseEnter(menuNames.document_extraction)
           }
           onMouseLeave={handleMenuMouseLeave}
         >
-          <button className="flex flex-row items-center hover:text-indigo-500">
+          <button className="flex flex-row items-center">
             <span className="mr-1">{menuNames.document_extraction}</span>
             <FaAngleDown
               className={`transition-transform ${
@@ -79,12 +81,12 @@ const index = () => {
             <DocumentExtractionMenu />
           )}
         </li>
-        <span
-          className="header-tab"
+        <li
+          className="ml-auto header-tab p-2 h-full flex items-center"
           onClick={() => (window.location.href = `https://tally.so/r/wvejQX`)}
         >
           Get started
-        </span>
+        </li>
       </ul>
     </div>
   );
