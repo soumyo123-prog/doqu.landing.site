@@ -82,10 +82,11 @@ const index = () => {
           )}
         </li>
         <li
-          className="ml-auto header-tab p-2 h-full flex items-center"
+          className="ml-auto header-tab h-full flex items-center rounded-l-full rounded-r-full bg-gray-200 h-[65%]"
           onClick={() => (window.location.href = `https://tally.so/r/wvejQX`)}
+          style={{ paddingLeft: "1rem", paddingRight: "1rem" }}
         >
-          Get started
+          Get started {">"}
         </li>
       </ul>
     </div>
