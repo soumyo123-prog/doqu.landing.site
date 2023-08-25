@@ -1,34 +1,34 @@
 import React from "react";
 import { BsStars } from "react-icons/bs";
 
-const DocumentExtractionMenu = () => {
-  const documentExtractionMenuData = [
-    {
-      encoder_app_id: "adverse-event-coding",
-      name: "Adverse event coding with MedDRA",
-      description:
-        "Extract adverse event mentioned in medical documents and map to MedDRA codes",
-    },
-    {
-      encoder_app_id: "diagnosis-and-procedure-coding-event-pcs",
-      name: "Diagnosis and procedure coding with ICD-10-CM/PCS",
-      description:
-        "Extract diagnosis and procedure mentions in medical documents and map to ICD-10-CM/ ICD-10-PCS codes",
-    },
-    {
-      encoder_app_id: "diagnosis-and-procedure-coding-event-cpt",
-      name: "Diagnosis and procedeure coding with ICD-10-CM and CPT",
-      description:
-        "Extract diagnosis and procedure mentions in medical documents and map to ICD-10-CM/ CPT codes",
-    },
-    {
-      encoder_app_id: "drug-medication-coding-event-atc",
-      name: "Drug and medication coding with ATC",
-      description:
-        "Extract drug and medication mentions in medical documents and map to ATC codes",
-    },
-  ];
+export const documentExtractionMenuData = [
+  {
+    encoder_app_id: "adverse-event-coding",
+    name: "Adverse event coding with MedDRA",
+    description:
+      "Extract adverse event mentioned in medical documents and map to MedDRA codes",
+  },
+  {
+    encoder_app_id: "diagnosis-and-procedure-coding-event-pcs",
+    name: "Diagnosis and procedure coding with ICD-10-CM/PCS",
+    description:
+      "Extract diagnosis and procedure mentions in medical documents and map to ICD-10-CM/ ICD-10-PCS codes",
+  },
+  {
+    encoder_app_id: "diagnosis-and-procedure-coding-event-cpt",
+    name: "Diagnosis and procedeure coding with ICD-10-CM and CPT",
+    description:
+      "Extract diagnosis and procedure mentions in medical documents and map to ICD-10-CM/ CPT codes",
+  },
+  {
+    encoder_app_id: "drug-medication-coding-event-atc",
+    name: "Drug and medication coding with ATC",
+    description:
+      "Extract drug and medication mentions in medical documents and map to ATC codes",
+  },
+];
 
+const DocumentExtractionMenu = () => {
   return (
     <div className="absolute left-[-30%] top-[95%] bg-white text-gray-900 border border-gray-200 rounded flex flex-col items-center">
       <div

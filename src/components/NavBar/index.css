@@ -33,3 +33,7 @@
   background-color: #072a44;
   border-radius: 0.5rem;
 }
+.custom-navbar-button:hover > .custom-transition-remove {
+  transform: translateX(5px);
+  transition: transform 0.2s;
+}
