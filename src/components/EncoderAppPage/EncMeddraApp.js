@@ -338,40 +338,6 @@ export default function MeddraEncoderPage() {
               </div>
             )}
           </div>
-          <div className="bg-white border-theme rounded w-full p-2 my-2">
-            <div className="flex">
-              <div className="tab-yellow cursor-pointer active">
-                <span>Hierarchy browser</span>
-                <span></span>
-              </div>
-            </div>
-            <div
-              className="overflow-y-auto"
-              style={{ height: "calc(100vh - 35rem)" }}
-            >
-              {appNodes.length > 0 ? (
-                appNodes.map((node) => (
-                  <EncNode
-                    key={node.node_id}
-                    node={node}
-                    expandedNodes={expandedNodes}
-                    setExpandedNodes={setExpandedNodes}
-                    getChildrenNodes={getChildrenNodes}
-                    expansionLoading={expansionLoading}
-                  />
-                ))
-              ) : (
-                <div className="flex justify-center items-center text-desc h-full">
-                  <span>
-                    <button className="text-blue-500 hover:cursor-pointer">
-                      Login
-                    </button>
-                  </span>
-                  <span>&nbsp;to browse the ontology</span>
-                </div>
-              )}
-            </div>
-          </div>
         </div>
       </div>
     </>
