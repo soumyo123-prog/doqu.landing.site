@@ -107,7 +107,7 @@ const SideBar = ({ open, closeSidebar }) => {
     <div
       className={`${styles.sidebarContainer} ${
         open ? styles.sidebarContainerOpen : ""
-      } border border-gray-300 rounded bg-white`}
+      } flex flex-col border border-gray-300 rounded bg-white`}
     >
       <header className={`${styles.sidebarHeader} w-full`}>
         <ul className="px-4 flex items-center w-full border border-b border-gray-300">
@@ -143,7 +143,7 @@ const SideBar = ({ open, closeSidebar }) => {
           </li>
         </ul>
       </header>
-      <div className="relative group">
+      <div className="relative group flex-grow">
         <div
           className={`${styles.sidebarMenuContainer} ${
             touched ? styles.hideSidebarMenuItemsContainer : ""
@@ -167,6 +167,24 @@ const SideBar = ({ open, closeSidebar }) => {
         >
           <SideBarMenuDetails heading={cardTouched} />
         </div>
+        {!touched && (
+          <div
+            className="absolute bottom-[3%] w-full flex justify-center"
+            style={{ paddingLeft: "1rem", paddingRight: "1rem" }}
+          >
+            <button
+              className="flex items-center rounded-l-full rounded-r-full bg-blue-100 hover:bg-indigo-200 transition-colors duration-300 cursor-pointer custom-navbar-button py-2 px-3"
+              onClick={() =>
+                (window.location.href = `https://tally.so/r/wvejQX`)
+              }
+            >
+              <span>Get started</span>
+              <span className="ml-1 custom-transition-remove">
+                <FaAngleRight />
+              </span>
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
