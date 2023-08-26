@@ -4,7 +4,7 @@ import axios from "axios";
 import NavBar from "../NavBar";
 import Pagination from "../Pagination";
 import EncNode from "./EncNode";
-import { IoSearchSharp } from "react-icons/io5";
+import { medicalTermCodingMenuData } from "../MedicalTermCodingMenu";
 
 export default function MeddraEncoderPage() {
   const {
@@ -18,6 +18,16 @@ export default function MeddraEncoderPage() {
   const [activeTerm, setActiveTerm] = useState("");
   const [appNodes, setAppNodes] = useState([]);
   const [expandedNodes, setExpandedNodes] = useState({});
+  const [title, setTitle] = useState(null);
+
+  useEffect(() => {
+    const menuItem = medicalTermCodingMenuData.find(
+      (item) => item.encoder_app_id === id
+    );
+    if (menuItem) {
+      setTitle(menuItem.name);
+    }
+  }, []);
 
   const getEncoderApp = async () => {
     try {
@@ -86,11 +96,11 @@ export default function MeddraEncoderPage() {
   useEffect(() => {
     if (activeTerm) getPredictions();
   }, [page]);
-  
+
   return (
     <>
       <NavBar activeTab={"medical-term-coding"} />
-      <div className="p-4 page-template flex gap-2">
+      <div className="hidden md:flex p-4 page-template flex gap-2">
         <div className="w-1/2">
           <div>
             <div className="bg-white border-theme p-2 my-2 rounded">
@@ -143,7 +153,6 @@ export default function MeddraEncoderPage() {
                     </option>
                   ))}
                 </select>
-                
               </div>
             </form>
           </div>
@@ -202,17 +211,6 @@ export default function MeddraEncoderPage() {
               <span></span>
             </div>
           </div>
-          <select
-            className="w-full my-2"
-            value={activeVersionRight}
-            onChange={(e) => setActiveVersionRight(e.target.value)}
-          >
-            {app.versions?.map((version) => (
-              <option key={version.version_name} value={version.version_name}>
-                {version.version_name}
-              </option>
-            ))}
-          </select>
           <div
             className="overflow-y-auto"
             style={{ height: "calc(100vh - 11.5rem)" }}
@@ -230,9 +228,149 @@ export default function MeddraEncoderPage() {
               ))
             ) : (
               <div className="flex justify-center items-center text-desc h-full">
-                Ontology data not available
+                <span>
+                  <button className="text-blue-500 hover:cursor-pointer">
+                    Login
+                  </button>
+                </span>
+                <span>&nbsp;to browse the ontology</span>
               </div>
             )}
+          </div>
+        </div>
+      </div>
+      <div
+        className="md:hidden px-8 py-4 flex gap-4 page-template overflow-auto"
+        style={{ height: "calc(100vh - 3.3rem)" }}
+      >
+        <div className="w-full flex flex-col gap-2">
+          <div className="text-gray-500 font-semibold flex w-full">
+            <div className="text-gray-500 font-semibold flex w-full text-xs">
+              MEDICAL TERM CODING&nbsp;{">"}&nbsp;{title}&nbsp;{">"}
+            </div>
+          </div>
+          <div>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                getPredictions();
+              }}
+            >
+              <div className="flex gap-2 items-center my-1">
+                <select
+                  className="w-full"
+                  value={activeVersionLeft}
+                  onChange={(e) => setActiveVersionLeft(e.target.value)}
+                >
+                  <option value="" disabled selected hidden>
+                    Version
+                  </option>
+                  {app.versions?.map((version) => (
+                    <option
+                      key={version.version_name}
+                      value={version.version_name}
+                    >
+                      {version.version_name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="flex gap-2 items-center my-1">
+                <input
+                  type="text"
+                  className="w-full"
+                  value={activeTerm}
+                  onChange={(e) => setActiveTerm(e.target.value)}
+                  placeholder="Term"
+                />
+              </div>
+              <div className="flex gap-2 items-center my-1">
+                <button className="w-full btn btn-primary" type="submit">
+                  Extract
+                </button>
+              </div>
+            </form>
+          </div>
+          <div
+            className="bg-white border-theme rounded mt-2"
+            style={{ height: "calc(100vh - 15.5rem)" }}
+          >
+            {Object.keys(predictions).length > 0 ? (
+              <div className="w-full h-full overflow-auto relative">
+                <div className="text-desc py-1 px-2">
+                  Recommendations for:{" "}
+                  <span className="font-medium">{activeTerm}</span>
+                </div>
+                <table className="enc-table">
+                  <thead>
+                    <tr>
+                      {predictions.column_names.map((column_name) => (
+                        <th key={column_name}>{column_name}</th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {predictions.records.map((record, index) => (
+                      <tr key={index}>
+                        {record.record_data.map((data) => (
+                          <td
+                            key={data.column_name}
+                            dangerouslySetInnerHTML={{
+                              __html: data.column_value,
+                            }}
+                          ></td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+                <Pagination
+                  page={page}
+                  setPage={setPage}
+                  lastPage={predictions.total_count / 50}
+                  size="md"
+                  isContainerWhite={true}
+                />
+              </div>
+            ) : (
+              <div className="flex justify-center items-center text-desc h-full">
+                Matching results are displayed here
+              </div>
+            )}
+          </div>
+          <div className="bg-white border-theme rounded w-full p-2 my-2">
+            <div className="flex">
+              <div className="tab-yellow cursor-pointer active">
+                <span>Hierarchy browser</span>
+                <span></span>
+              </div>
+            </div>
+            <div
+              className="overflow-y-auto"
+              style={{ height: "calc(100vh - 35rem)" }}
+            >
+              {appNodes.length > 0 ? (
+                appNodes.map((node) => (
+                  <EncNode
+                    key={node.node_id}
+                    node={node}
+                    expandedNodes={expandedNodes}
+                    setExpandedNodes={setExpandedNodes}
+                    getChildrenNodes={getChildrenNodes}
+                    expansionLoading={expansionLoading}
+                  />
+                ))
+              ) : (
+                <div className="flex justify-center items-center text-desc h-full">
+                  <span>
+                    <button className="text-blue-500 hover:cursor-pointer">
+                      Login
+                    </button>
+                  </span>
+                  <span>&nbsp;to browse the ontology</span>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
