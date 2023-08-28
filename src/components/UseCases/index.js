@@ -2,12 +2,9 @@ import React from "react";
 
 import bg from "../../../static/img/usecasesbg.png";
 
-import useC1 from "../../../static/img/use-case-automated.png";
-import useC2 from "../../../static/img/use-case-standard.png";
-import useC3 from "../../../static/img/use-case-fraud.png";
-import useC4 from "../../../static/img/use-case-vigilance.png";
-import useC5 from "../../../static/img/use-case-analytics.png";
-import useC6 from "../../../static/img/use-case-insight.png";
+import useC1 from "../../../static/img/use-case-accuracy.png";
+import useC2 from "../../../static/img/use-case-api-access.png";
+import useC3 from "../../../static/img/use-case-data-privacy.png";
 
 const UseCaseCard = ({ label, img }) => {
   return (
@@ -52,18 +49,15 @@ const UseCases = () => {
         padding: "40px",
       }}
     >
-      <h2 style={{ fontSize: "25px" }}>Use Cases</h2>
+      <h2 style={{ fontSize: "25px" }}>Features</h2>
       <p style={{}}>
-        EinMind apps support building various AI powered data pipelines
+        Everything you need for streamlining medical coding
       </p>
 
       <div className="usecases-grid">
-        <UseCaseCard label="Automated Medical Coding" img={useC1} />
-        <UseCaseCard label="Data Standardization" img={useC2} />
-        <UseCaseCard label="Fraud Detection" img={useC3} />
-        <UseCaseCard label="Pharmacovigilance" img={useC4} />
-        <UseCaseCard label="Drug Intelligence" img={useC5} />
-        <UseCaseCard label="Analytics and Insights" img={useC6} />
+        <UseCaseCard label="Accurate Medical Coding" img={useC1} />
+        <UseCaseCard label="API Access" img={useC2} />
+        <UseCaseCard label="Data Privacy" img={useC3} />        
       </div>
     </div>
   );
