@@ -59,9 +59,7 @@ const DocumentExtractionMenu = () => {
                 <p className="text-xs font-semibold text-gray-900">
                   {menuItem.name}
                 </p>
-                <p className="text-gray-500" style={{ fontSize: "0.6rem" }}>
-                  {menuItem.description}
-                </p>
+                <p className="text-xs text-gray-500">{menuItem.description}</p>
               </div>
             </div>
           </a>

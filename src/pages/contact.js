@@ -2,15 +2,15 @@ import React, { useEffect, useRef } from "react";
 
 import "./index.css";
 
-import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import NewNavbar from "../components/NewNavbar";
 
 export default function Contact() {
   const formRef = useRef(null);
 
   return (
     <>
-      <NavBar />
+      <NewNavbar />
       <iframe
         ref={formRef}
         src="https://docs.google.com/forms/d/e/1FAIpQLScFOHIJbQCYpA06fvuVgiCIjSnpthFSeNVWR1aTokWTk3Le4w/viewform?embedded=true"

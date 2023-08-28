@@ -76,7 +76,7 @@ const MedicalTermCodingMenu = () => {
                   <p className="text-xs font-semibold text-gray-900">
                     {menuItem.name} Coding
                   </p>
-                  <p className="text-gray-500" style={{ fontSize: "0.6rem" }}>
+                  <p className="text-xs text-gray-500">
                     {menuItem.description}
                   </p>
                 </div>

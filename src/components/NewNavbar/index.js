@@ -48,8 +48,8 @@ const NewNavbar = () => {
               className={styles.logo_img}
               src={logo}
               alt="EinMind"
-              width={35}
-              height={35}
+              width={30}
+              height={30}
             />
             <div className={styles.logo_text}>EinMind</div>
           </div>
