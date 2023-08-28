@@ -43,7 +43,10 @@ export const medicalTermCodingMenuData = [
 const MedicalTermCodingMenu = () => {
   return (
     <>
-      <div className="absolute left-[-30%] top-[95%] bg-white text-gray-900 border border-gray-200 rounded flex flex-col items-center">
+      <div
+        className="absolute right-[-200%] top-[200%] bg-white text-gray-900 border border-gray-200 shadow-md rounded flex flex-col items-center"
+        style={{ zIndex: "10000" }}
+      >
         <div
           className="font-semibold flex items-center justify-center w-full px-12"
           style={{ height: "3.5rem" }}
