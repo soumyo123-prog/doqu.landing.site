@@ -45,7 +45,9 @@ const Banner = () => {
           <div>EinMind uses AI to generate your content</div>
         </div>
         <div>
-          <div className={styles.text_med}> AI Assistants in Action</div>
+          <div className={`${styles.text_med} mb-2`}>
+            AI Assistants in Action
+          </div>
           <picture>
             <img
               src={"/img/line.svg"}
