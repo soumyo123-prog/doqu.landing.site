@@ -62,7 +62,7 @@ const BannerVideoMobile = () => {
           ))}
         </ul>
       </div>
-      <div className="flex justify_center">
+      <div className="flex justify-center">
         <div className={styles.video_container}>
           <video
             width="277"
