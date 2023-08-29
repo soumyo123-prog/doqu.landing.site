@@ -86,6 +86,7 @@ const BannerVideoMobile = () => {
                 ? styles.display_tab
                 : styles.hide_tab
             }
+            onClick={() => setActiveModule(index)}
           >
             {/* <span>{index + 1}</span> */}
           </li>

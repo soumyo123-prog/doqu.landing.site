@@ -1,10 +1,19 @@
 .container {
-  padding: 2.5rem 3rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  padding: 1.5rem 4.9rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #062335;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
+}
+.container * {
+  font-family: inherit;
 }
 .logo {
   cursor: pointer;
@@ -17,7 +26,7 @@
 }
 .logo_text {
   color: #eee;
-  font-size: 1.2rem;
+  font-size: 1.54em;
   font-weight: 600;
   margin-left: 1rem;
 }
@@ -28,7 +37,9 @@
 }
 .list li {
   cursor: pointer;
-  font-size: 0.9rem;
+  padding: 0.65rem 1.2rem;
+  margin: 0 0.4rem;
+  font-size: 1.08em;
   font-weight: 500;
   transition: all 0.3s ease-in-out;
   color: #eee;
@@ -42,7 +53,7 @@
   background: #06bdb1;
   color: #eee;
   margin-right: 0;
-  padding: 0.5rem 1rem;
+  padding: 0.65rem 1.2rem;
 }
 
 .list li:last-of-type:hover {
@@ -54,29 +65,72 @@
   background: #06bdb1;
   color: #eee;
   margin-right: 0;
+  padding: 0.65rem 1rem;
+  /* width: 40px;
+  height: 40px; */
 }
 
 .hamburger:hover {
   background-color: #09e9da;
   color: white;
 }
+
 @media screen and (max-width: 1440px) {
   .container {
-    padding: 1.2rem 8rem;
+    padding: 1.5rem 6.5rem;
   }
 }
+
 @media screen and (max-width: 1200px) {
   .container {
-    padding: 1.2rem 5rem;
+    padding: 1.5rem 6.5rem;
   }
 }
-@media screen and (max-width: 1024px) {
+
+@media screen and (max-width: 1040px) {
   .container {
-    padding: 1.2rem 2rem;
+    padding: 1.5rem 4.9rem;
+  }
+  .list li {
+    padding: 0.65rem 0.8rem;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 860px) {
+  .container {
+    padding: 1.5rem 2.4rem
+  }
+}
+@media screen and (max-width: 590px) {
+  .container {
+    padding: 1.5rem 3.2rem;
+  }
   .list li {
-    font-size: 1rem;
+    padding: 0.65rem 0.8rem;
+  }
+  .list li:last-of-type {
+    padding: 0.65rem 1.2rem;
+    margin-left: 0.8rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 1.5rem 2.4rem;
+  }
+  .list li {
+    padding: 0.65rem 0.7rem;
+  }
+  .list li:last-of-type {
+    padding: 0.65rem 1rem;
+    margin-left: 0.4rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 1.5rem 1.6rem;
+  }
+}
+@media screen and (max-width: 440px) {
+  .list li:nth-of-type(2) {
+    margin: 0;
   }
 }

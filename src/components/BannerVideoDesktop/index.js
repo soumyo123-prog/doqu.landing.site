@@ -50,6 +50,9 @@ const BannerVideoDesktop = () => {
           <li
             key={index}
             className={index === activeModule ? styles.active : undefined}
+            onClick={() => {
+              setActiveModule(index);
+            }}
           >
             {/* <span>{index + 1}</span> */}
           </li>
