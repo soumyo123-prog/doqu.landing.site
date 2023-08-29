@@ -24,3 +24,20 @@
   background-color: #032b44;
   border-radius: 50%;
 }
+
+.sticky-features-nav {
+  position: sticky;
+  z-index: 9998;
+  top: 89px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #dae7f2;
+  background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .sticky-features-nav {
+    top: 81px;
+  }
+}

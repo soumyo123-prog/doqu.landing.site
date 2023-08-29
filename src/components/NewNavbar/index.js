@@ -56,14 +56,14 @@ const NewNavbar = () => {
         </a>
         <ul className={`${styles.list}`}>
           <li
-            className="hidden md:flex mr-8 relative group"
+            className="hidden md:flex relative group"
             onMouseEnter={() =>
               handleLinkMouseEnter(menuNames.medical_term_coding)
             }
             onMouseLeave={handleMenuMouseLeave}
           >
             <button className="flex items-center">
-              <span className="mr-0.5">{menuNames.medical_term_coding}</span>
+              <span>{menuNames.medical_term_coding}</span>
               <FaAngleDown
                 className={`transition-transform ${
                   openMenu === menuNames.medical_term_coding
@@ -77,14 +77,14 @@ const NewNavbar = () => {
             )}
           </li>
           <li
-            className="hidden md:flex mr-8 relative group"
+            className="hidden md:flex relative group"
             onMouseEnter={() =>
               handleLinkMouseEnter(menuNames.document_extraction)
             }
             onMouseLeave={handleMenuMouseLeave}
           >
             <button className="flex items-center">
-              <span className="mr-0.5">{menuNames.document_extraction}</span>
+              <span>{menuNames.document_extraction}</span>
               <FaAngleDown
                 className={`transition-transform ${
                   openMenu === menuNames.document_extraction
@@ -98,19 +98,19 @@ const NewNavbar = () => {
             )}
           </li>
           <li className={`${styles.get_started_button} hidden md:flex`}>
-            <a
+            <button
               onClick={() =>
                 (window.location.href = `https://tally.so/r/wvejQX`)
               }
             >
               Get started
-            </a>
+            </button>
           </li>
         </ul>
         <ul className="md:hidden">
           <li className={`${styles.hamburger} ml-auto hover:cursor-pointer`}>
             <button
-              className="flex items-center py-3 px-4"
+              className="flex items-center justify-center w-full h-full"
               onClick={onOpenSidebar}
             >
               <GiHamburgerMenu />

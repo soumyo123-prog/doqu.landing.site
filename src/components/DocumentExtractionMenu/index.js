@@ -31,7 +31,7 @@ export const documentExtractionMenuData = [
 const DocumentExtractionMenu = () => {
   return (
     <div
-      className="absolute right-[-100%] top-[200%] bg-white text-gray-900 border border-gray-200 shadow-md rounded flex flex-col items-center"
+      className="absolute right-[-100%] top-[120%] bg-white text-gray-900 border border-gray-200 shadow-md rounded flex flex-col items-center"
       style={{ zIndex: "10000" }}
     >
       <div

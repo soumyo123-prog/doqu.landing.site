@@ -61,19 +61,7 @@ const Features = () => {
 
   return (
     <div style={{ textAlign: "center" }}>
-      <div
-        className="features-nav"
-        style={{
-          position: "sticky",
-          zIndex: 999,
-          top: "53px",
-          height: "45px",
-          justifyContent: "center",
-          alignItems: "center",
-          border: "1px solid #dae7f2",
-          backgroundColor: "white",
-        }}
-      >
+      <div className="features-nav sticky-features-nav">
         <ul
           style={{
             display: "flex",
@@ -152,7 +140,8 @@ const Features = () => {
             </div>
           </div>
           <p style={{ lineHeight: "24px", margin: "1rem 0" }}>
-            Seamlessly translate complex medical terms to codes through AI Medical Autocoders.
+            Seamlessly translate complex medical terms to codes through AI
+            Medical Autocoders.
           </p>
           <div
             style={{
@@ -160,22 +149,64 @@ const Features = () => {
               //color: "#776F6F",
               maxWidth: "450px",
             }}
-          >    
+          >
             <div
               className="supports-card2"
-              style={{                                
+              style={{
                 marginTop: "10px",
                 fontSize: "14px",
                 textAlign: "left",
               }}
             >
-              <span><a href="/medical-term-coding/meddra-coder">&#xbb; <b>MedDRA Coding</b>: map adverse event terms</a></span> <br/><br/>
-              <span><a href="/medical-term-coding/icd-10-cm-coder">&#xbb; <b>ICD-10-CM Coding</b>: map diagnosis terms</a></span> <br/><br/>
-              <span><a href="/medical-term-coding/icd-11-coder">&#xbb; <b>ICD-11 Coding</b>: map diagnosis terms</a></span> <br/><br/>
-              <span><a href="/medical-term-coding/cpt-coder">&#xbb; <b>CPT® Coding</b>: map medical procedures</a></span> <br/><br/>
-              <span><a href="/medical-term-coding/atc-coder">&#xbb; <b>ATC Coding</b>: map drugs and medications</a></span> <br/><br/>
-              <span><a href="/medical-term-coding/snomed-coder">&#xbb; <b>SNOMED Coding</b>: map medical terms</a></span> <br/><br/>
-              <span><a href="/medical-term-coding/mesh-coder">&#xbb; <b>MeSH Coding</b>: map medical terms</a></span> <br/><br/>
+              <span>
+                <a href="/medical-term-coding/meddra-coder">
+                  &#xbb; <b>MedDRA Coding</b>: map adverse event terms
+                </a>
+              </span>{" "}
+              <br />
+              <br />
+              <span>
+                <a href="/medical-term-coding/icd-10-cm-coder">
+                  &#xbb; <b>ICD-10-CM Coding</b>: map diagnosis terms
+                </a>
+              </span>{" "}
+              <br />
+              <br />
+              <span>
+                <a href="/medical-term-coding/icd-11-coder">
+                  &#xbb; <b>ICD-11 Coding</b>: map diagnosis terms
+                </a>
+              </span>{" "}
+              <br />
+              <br />
+              <span>
+                <a href="/medical-term-coding/cpt-coder">
+                  &#xbb; <b>CPT® Coding</b>: map medical procedures
+                </a>
+              </span>{" "}
+              <br />
+              <br />
+              <span>
+                <a href="/medical-term-coding/atc-coder">
+                  &#xbb; <b>ATC Coding</b>: map drugs and medications
+                </a>
+              </span>{" "}
+              <br />
+              <br />
+              <span>
+                <a href="/medical-term-coding/snomed-coder">
+                  &#xbb; <b>SNOMED Coding</b>: map medical terms
+                </a>
+              </span>{" "}
+              <br />
+              <br />
+              <span>
+                <a href="/medical-term-coding/mesh-coder">
+                  &#xbb; <b>MeSH Coding</b>: map medical terms
+                </a>
+              </span>{" "}
+              <br />
+              <br />
             </div>
           </div>
 
@@ -251,7 +282,7 @@ const Features = () => {
               &nbsp;&nbsp; <RedSquare />
             </div>
           </div>
-          <p style={{ lineHeight: "24px", margin: "1rem 0"  }}>
+          <p style={{ lineHeight: "24px", margin: "1rem 0" }}>
             Discover EinMind's 'document coding' tool, an AI-powered marvel that
             swiftly extracts and suggests codes for medical terms. It simplifies
             the coding process by intelligently identifying medical entities in
@@ -259,18 +290,22 @@ const Features = () => {
             data into valuable, code-rich data.
           </p>
           <div
-            style={{              
+            style={{
               padding: "18px",
               fontSize: "16px",
               //color: "#776F6F",
               maxWidth: "450px",
-              textAlign: "center"
+              textAlign: "center",
             }}
-          >     
-          <p style={{
-              fontWeight: "bold",
-              textAlign: "left"
-            }}>Try now:</p>
+          >
+            <p
+              style={{
+                fontWeight: "bold",
+                textAlign: "left",
+              }}
+            >
+              Try now:
+            </p>
 
             <div
               className="supports-card2"
@@ -282,10 +317,34 @@ const Features = () => {
                 textAlign: "left",
               }}
             >
-              <span><a href="/medical-term-coding/meddra-coder">&#xbb; Extract adverse event MedDRA codes from documents</a></span><br/><br/>
-              <span><a href="/medical-term-coding/icd-10-cm-coder">&#xbb; Extract diagnosis (ICD-10-CM) and procedure (ICD-10-PCS) codes from documents</a></span><br/><br/>
-              <span><a href="/medical-term-coding/icd-11-coder">&#xbb; Extract diagnosis (ICD-10-CM) and procedure (CPT) codes from documents</a></span><br/><br/>
-              <span><a href="/medical-term-coding/cpt-coder">&#xbb; Extract drug and medication ATC codes from documents</a></span>
+              <span>
+                <a href="/medical-term-coding/meddra-coder">
+                  &#xbb; Extract adverse event MedDRA codes from documents
+                </a>
+              </span>
+              <br />
+              <br />
+              <span>
+                <a href="/medical-term-coding/icd-10-cm-coder">
+                  &#xbb; Extract diagnosis (ICD-10-CM) and procedure
+                  (ICD-10-PCS) codes from documents
+                </a>
+              </span>
+              <br />
+              <br />
+              <span>
+                <a href="/medical-term-coding/icd-11-coder">
+                  &#xbb; Extract diagnosis (ICD-10-CM) and procedure (CPT) codes
+                  from documents
+                </a>
+              </span>
+              <br />
+              <br />
+              <span>
+                <a href="/medical-term-coding/cpt-coder">
+                  &#xbb; Extract drug and medication ATC codes from documents
+                </a>
+              </span>
             </div>
           </div>
         </div>
@@ -315,7 +374,7 @@ const Features = () => {
               &nbsp;&nbsp; <RedSquare />
             </div>
           </div>
-          <p style={{ lineHeight: "24px", margin: "1rem 0"  }}>
+          <p style={{ lineHeight: "24px", margin: "1rem 0" }}>
             Explore EinMind's comprehensive app store, designed to provide a
             one-stop solution for all your medical document pre-processing
             needs. Equipped with an array of innovative tools, our platform
@@ -376,7 +435,7 @@ const Features = () => {
               &nbsp;&nbsp; <RedSquare />
             </div>
           </div>
-          <p style={{ lineHeight: "24px", margin: "1rem 0"  }}>
+          <p style={{ lineHeight: "24px", margin: "1rem 0" }}>
             Experience the ease of data extraction with EinMind's workflow
             builder. It enables users to design custom pipelines for complex
             scenarios without any coding. This intuitive tool turns complicated
