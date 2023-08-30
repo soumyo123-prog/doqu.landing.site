@@ -12,11 +12,11 @@
     margin: calc(2rem + 89.85px) 15vw 3.3rem;
   }
 }
-@media screen and (min-width: 1300px) {
+/* @media screen and (min-width: 1300px) {
   .container {
     margin: calc(2rem + 89.85px) 25vw 3.3rem;
   }
-}
+} */
 @media screen and (max-width: 768px) {
   .container {
     margin: calc(2rem + 81.8px) 3.7rem 3.2rem;
