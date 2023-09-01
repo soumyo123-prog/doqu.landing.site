@@ -3,6 +3,10 @@ import EncApp from "../../components/EncoderAppPage/EncApp"
 import "../public_apps.css";
 
 
+const page_title = "ICD-10-CM Coding"
+const page_definition = "Map medical diagnosis and disease terms to ICD-10-CM codes with AI"
+
+
 const terms = [
   {
     "term": "Triple-negative breast cancer",

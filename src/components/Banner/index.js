@@ -38,16 +38,19 @@ const Banner = () => {
     <>
       <div className={styles.container}>
         <div className={styles.text_container}>
-          <div className={styles.text_lg}>Create professional </div>
-          <div className={styles.text_xlg}>
+          {/* <div className={styles.text_lg}>Create professional </div> */}
+          {/* <div className={styles.text_xlg}>
             Content in <span>Seconds</span>
+          </div> */}
+          <div className={styles.text_xlg}>
+            Streamlining <br/>Medical Coding with AI
           </div>
-          <div>EinMind uses AI to generate your content</div>
+          {/* <div>EinMind uses AI to generate your content</div> */}
         </div>
         <div>
-          <div className={`${styles.text_med} mb-2`}>
+          {/* <div className={`${styles.text_med} mb-2`}>
             AI Assistants in Action
-          </div>
+          </div> */}
           <picture>
             <img
               src={"/img/line.svg"}

@@ -2,6 +2,11 @@ import React from 'react'
 import EncApp from "../../components/EncoderAppPage/EncApp"
 import "../public_apps.css";
 
+
+page_title = "ATC Coding"
+page_definition = "Map medication and drug names to ATC codes with AI"
+
+
 const terms = [
   {
     "term": "Namuscla",
@@ -38,10 +43,10 @@ const terms = [
 ]
 
 
-const ICD10CM = () => {
+const ATC = () => {
   return (
     <EncApp />
   )
 }
 
-export default ICD10CM
+export default ATC

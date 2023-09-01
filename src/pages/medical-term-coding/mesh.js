@@ -3,6 +3,10 @@ import EncApp from "../../components/EncoderAppPage/EncApp"
 import "../public_apps.css";
 
 
+page_title = "MeSH Coding"
+page_definition = "Map medical terms to MeSH codes with AI"
+
+
 const terms = [
   {
     "term": "Mad cow disease",
@@ -110,10 +114,10 @@ const terms = [
 ]
 
 
-const ICD10CM = () => {
+const MeSH = () => {
   return (
     <EncApp />
   )
 }
 
-export default ICD10CM
+export default MeSH

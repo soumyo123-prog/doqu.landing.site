@@ -2,6 +2,9 @@ import React from 'react'
 import EncMeddraApp from "../../components/EncoderAppPage/EncMeddraApp"
 import "../public_apps.css";
 
+page_title = "MedDRA Coding"
+page_definition = "Map adverse events and medical terms to MedDRA codes with AI"
+
 
 const terms = [
     {

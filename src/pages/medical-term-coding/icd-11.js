@@ -3,6 +3,10 @@ import EncApp from "../../components/EncoderAppPage/EncApp"
 import "../public_apps.css";
 
 
+page_title = "ICD-11 Coding"
+page_definition = "Map medical diagnosis and disease terms to ICD-11 codes with AI"
+
+
 const terms = [
   {
     "term": "Triple-negative breast cancer",
@@ -78,10 +82,10 @@ const terms = [
 ]
 
 
-const ICD10CM = () => {
+const ICD11 = () => {
   return (
     <EncApp />
   )
 }
 
-export default ICD10CM
+export default ICD11

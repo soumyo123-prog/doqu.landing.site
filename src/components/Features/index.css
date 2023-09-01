@@ -28,7 +28,7 @@
 .sticky-features-nav {
   position: sticky;
   z-index: 9998;
-  top: 89px;
+  top: 58px;
   height: 45px;
   justify-content: center;
   align-items: center;
@@ -38,6 +38,6 @@
 
 @media screen and (max-width: 768px) {
   .sticky-features-nav {
-    top: 81px;
+    top: 50px;
   }
 }

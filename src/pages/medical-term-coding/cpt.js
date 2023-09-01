@@ -2,6 +2,9 @@ import React from 'react'
 import EncApp from "../../components/EncoderAppPage/EncApp"
 import "../public_apps.css";
 
+page_title = "CPT Coding"
+page_definition = "Map medical treatments and procedures to CPT codes AI"
+
 
 const terms = [
   {
@@ -28,10 +31,10 @@ const terms = [
 ]
 
 
-const ICD10CM = () => {
+const CPT = () => {
   return (
     <EncApp />
   )
 }
 
-export default ICD10CM
+export default CPT

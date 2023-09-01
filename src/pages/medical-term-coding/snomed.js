@@ -3,6 +3,10 @@ import EncApp from "../../components/EncoderAppPage/EncApp"
 import "../public_apps.css";
 
 
+page_title = "SNOMED Coding"
+page_definition = "Map medical terms to SNOMED codes with AI"
+
+
 const terms = [
   {
     "term": "high blood pressure",
@@ -73,10 +77,10 @@ const terms = [
 ]
 
 
-const ICD10CM = () => {
+const SNOMED = () => {
   return (
     <EncApp />
   )
 }
 
-export default ICD10CM
+export default SNOMED
