@@ -1,86 +1,80 @@
-import React from 'react'
-import EncApp from "../../components/EncoderAppPage/EncApp"
+import React from "react";
+import EncApp from "../../components/EncoderAppPage/EncApp";
 import "../public_apps.css";
 
-
-page_title = "SNOMED Coding"
-page_definition = "Map medical terms to SNOMED codes with AI"
-
+const page_title = "SNOMED Coding";
+const page_definition = "Map medical terms to SNOMED codes with AI";
 
 const terms = [
   {
-    "term": "high blood pressure",
-    "mappings": [
+    term: "high blood pressure",
+    mappings: [
       {
-        "Name": "Hypertensive disorder",
-        "Code": "38341003",
-        "Score": "99%"
-      }
-    ]
+        Name: "Hypertensive disorder",
+        Code: "38341003",
+        Score: "99%",
+      },
+    ],
   },
 
   {
-    "term": "Arterial hypotension",
-    "mappings": [
+    term: "Arterial hypotension",
+    mappings: [
       {
-        "Name": "Low blood pressure",
-        "Code": "45007003",
-        "Score": "87%"
-      }      
-    ]
+        Name: "Low blood pressure",
+        Code: "45007003",
+        Score: "87%",
+      },
+    ],
   },
 
   {
-    "term": "Heart attack",
-    "mappings": [
+    term: "Heart attack",
+    mappings: [
       {
-        "Name": "Myocardial infarction",
-        "Code": "22298006",
-        "Score": "97%"
-      }      
-    ]
+        Name: "Myocardial infarction",
+        Code: "22298006",
+        Score: "97%",
+      },
+    ],
   },
 
   {
-    "term": "stroke",
-    "mappings": [
+    term: "stroke",
+    mappings: [
       {
-        "Name": "Cerebrovascular accident",
-        "Code": "230690007",
-        "Score": "93%"
-      }      
-    ]
+        Name: "Cerebrovascular accident",
+        Code: "230690007",
+        Score: "93%",
+      },
+    ],
   },
 
   {
-    "term": "winter blues",
-    "mappings": [
+    term: "winter blues",
+    mappings: [
       {
-        "Name": "Seasonal affective disorder",
-        "Code": "247803002",
-        "Score": "88%"
-      }      
-    ]
+        Name: "Seasonal affective disorder",
+        Code: "247803002",
+        Score: "88%",
+      },
+    ],
   },
 
   {
-    "term": "german measles",
-    "mappings": [
+    term: "german measles",
+    mappings: [
       {
-        "Name": "Rubella",
-        "Code": "36653000",
-        "Score": "97%"
-      }      
-    ]
+        Name: "Rubella",
+        Code: "36653000",
+        Score: "97%",
+      },
+    ],
   },
-
-]
-
+];
 
 const SNOMED = () => {
-  return (
-    <EncApp />
-  )
-}
+  return <EncApp terms={terms} />;
+};
 
-export default SNOMED
+export default SNOMED;

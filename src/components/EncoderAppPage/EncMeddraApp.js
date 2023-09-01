@@ -6,7 +6,7 @@ import Pagination from "../Pagination";
 import EncNode from "./EncNode";
 import { medicalTermCodingMenuData } from "../MedicalTermCodingMenu";
 
-export default function MeddraEncoderPage() {
+export default function MeddraEncoderPage({ terms }) {
   const {
     siteConfig: { customFields },
   } = useDocusaurusContext();
@@ -19,6 +19,7 @@ export default function MeddraEncoderPage() {
   const [appNodes, setAppNodes] = useState([]);
   const [expandedNodes, setExpandedNodes] = useState({});
   const [title, setTitle] = useState(null);
+  const [description, setDescription] = useState(null);
 
   useEffect(() => {
     const menuItem = medicalTermCodingMenuData.find(
@@ -26,6 +27,7 @@ export default function MeddraEncoderPage() {
     );
     if (menuItem) {
       setTitle(menuItem.name);
+      setDescription(menuItem.description);
     }
   }, []);
 
@@ -104,15 +106,8 @@ export default function MeddraEncoderPage() {
         <div className="w-1/2">
           <div>
             <div className="bg-white border-theme p-2 my-2 rounded">
-              <div className="font-medium">{app.name}</div>
-              <p
-                title={
-                  [app.description]?.length > 175 ? app.description : undefined
-                }
-                className="text-desc restrict-lines two"
-              >
-                {app.description}
-              </p>
+              <div className="font-semibold">{title}</div>
+              <p className="text-gray-500">{description}</p>
             </div>
             <form
               onSubmit={(e) => {
@@ -121,41 +116,47 @@ export default function MeddraEncoderPage() {
               }}
             >
               <div className="flex gap-2 items-center my-1">
-                <span className="w-[4rem] text-right">Version</span>
                 <select
                   className="w-full"
-                  value={activeVersionLeft}
-                  onChange={(e) => setActiveVersionLeft(e.target.value)}
+                  value={activeTerm}
+                  onChange={(e) => setActiveTerm(e.target.value)}
                 >
-                  {app.versions?.map((version) => (
-                    <option
-                      key={version.version_name}
-                      value={version.version_name}
-                    >
-                      {version.version_name}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div className="flex gap-2 items-center my-1">
-                <span className="w-[4rem] text-right">Term</span>
-                <select
-                  className="w-full"
-                  value={activeVersionLeft}
-                  onChange={(e) => setActiveVersionLeft(e.target.value)}
-                >
-                  {app.versions?.map((version) => (
-                    <option
-                      key={version.version_name}
-                      value={version.version_name}
-                    >
-                      {version.version_name}
-                    </option>
+                  <option value="" disabled selected hidden>
+                    Select Term
+                  </option>
+                  {terms.map((term, index) => (
+                    <option value={index}>{term.term}</option>
                   ))}
                 </select>
               </div>
             </form>
           </div>
+          {activeTerm && (
+            <div className="bg-white border-theme rounded mt-2">
+              <div className="w-full h-full overflow-auto relative">
+                <table className="enc-table">
+                  <thead>
+                    <tr>
+                      {Object.keys(terms[activeTerm].mappings[0]).map(
+                        (column_name) => (
+                          <th key={column_name}>{column_name}</th>
+                        )
+                      )}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {terms[activeTerm].mappings.map((mapping, index) => (
+                      <tr key={index}>
+                        {Object.values(mapping).map((data, index) => (
+                          <td key={index}>{data}</td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
           <div
             className="bg-white border-theme rounded mt-2"
             style={{ height: "calc(100vh - 15.5rem)" }}
@@ -250,6 +251,10 @@ export default function MeddraEncoderPage() {
             </div>
           </div>
           <div>
+            <div className="bg-white border-theme p-2 my-2 rounded">
+              <div className="font-semibold">{title}</div>
+              <p className="text-gray-500">{description}</p>
+            </div>
             <form
               onSubmit={(e) => {
                 e.preventDefault();
@@ -259,38 +264,45 @@ export default function MeddraEncoderPage() {
               <div className="flex gap-2 items-center my-1">
                 <select
                   className="w-full"
-                  value={activeVersionLeft}
-                  onChange={(e) => setActiveVersionLeft(e.target.value)}
+                  value={activeTerm}
+                  onChange={(e) => setActiveTerm(e.target.value)}
                 >
                   <option value="" disabled selected hidden>
-                    Version
+                    Select Term
                   </option>
-                  {app.versions?.map((version) => (
-                    <option
-                      key={version.version_name}
-                      value={version.version_name}
-                    >
-                      {version.version_name}
-                    </option>
+                  {terms.map((term, index) => (
+                    <option value={index}>{term.term}</option>
                   ))}
                 </select>
               </div>
-              <div className="flex gap-2 items-center my-1">
-                <input
-                  type="text"
-                  className="w-full"
-                  value={activeTerm}
-                  onChange={(e) => setActiveTerm(e.target.value)}
-                  placeholder="Term"
-                />
-              </div>
-              <div className="flex gap-2 items-center my-1">
-                <button className="w-full btn btn-primary" type="submit">
-                  Extract
-                </button>
-              </div>
             </form>
           </div>
+          {activeTerm && (
+            <div className="bg-white border-theme rounded mt-2">
+              <div className="w-full h-full overflow-auto relative">
+                <table className="enc-table">
+                  <thead>
+                    <tr>
+                      {Object.keys(terms[activeTerm].mappings[0]).map(
+                        (column_name) => (
+                          <th key={column_name}>{column_name}</th>
+                        )
+                      )}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {terms[activeTerm].mappings.map((mapping, index) => (
+                      <tr key={index}>
+                        {Object.values(mapping).map((data, index) => (
+                          <td key={index}>{data}</td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
           <div
             className="bg-white border-theme rounded mt-2"
             style={{ height: "calc(100vh - 15.5rem)" }}

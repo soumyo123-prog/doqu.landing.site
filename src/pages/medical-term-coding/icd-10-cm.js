@@ -1,91 +1,87 @@
-import React from 'react'
-import EncApp from "../../components/EncoderAppPage/EncApp"
+import React from "react";
+import EncApp from "../../components/EncoderAppPage/EncApp";
 import "../public_apps.css";
 
-
-const page_title = "ICD-10-CM Coding"
-const page_definition = "Map medical diagnosis and disease terms to ICD-10-CM codes with AI"
-
+const page_title = "ICD-10-CM Coding";
+const page_definition =
+  "Map medical diagnosis and disease terms to ICD-10-CM codes with AI";
 
 const terms = [
   {
-    "term": "Triple-negative breast cancer",
-    "mappings": [
+    term: "Triple-negative breast cancer",
+    mappings: [
       {
-        "Level": "6",
-        "Name": "Malignant neoplasm of unspecified site of unspecified male breast",
-        "Code": "C50.929",
-        "Score": "92%"
+        Level: "6",
+        Name: "Malignant neoplasm of unspecified site of unspecified male breast",
+        Code: "C50.929",
+        Score: "92%",
       },
       {
-        "Level": "6",
-        "Name": "Malignant neoplasm of unspecified site of unspecified female breast",
-        "Code": "C50.919",
-        "Score": "90%"
-      }
-    ]
+        Level: "6",
+        Name: "Malignant neoplasm of unspecified site of unspecified female breast",
+        Code: "C50.919",
+        Score: "90%",
+      },
+    ],
   },
 
   {
-    "term": "OM",
-    "mappings": [
+    term: "OM",
+    mappings: [
       {
-        "Level": "5",
-        "Name": "Otitis media, unspecified, unspecified ear",
-        "Code": "H66.90",
-        "Score": "94%"
+        Level: "5",
+        Name: "Otitis media, unspecified, unspecified ear",
+        Code: "H66.90",
+        Score: "94%",
       },
       {
-        "Level": "5",
-        "Name": "Otitis media, unspecified, bilateral",
-        "Code": "H66.93",
-        "Score": "81%"
+        Level: "5",
+        Name: "Otitis media, unspecified, bilateral",
+        Code: "H66.93",
+        Score: "81%",
       },
       {
-        "Level": "5",
-        "Name": "Otitis media, unspecified, right ear",
-        "Code": "H66.91",
-        "Score": "43%"
+        Level: "5",
+        Name: "Otitis media, unspecified, right ear",
+        Code: "H66.91",
+        Score: "43%",
       },
       {
-        "Level": "5",
-        "Name": "Otitis media, unspecified, left ear",
-        "Code": "H66.92",
-        "Score": "38%"
-      }
-    ]
+        Level: "5",
+        Name: "Otitis media, unspecified, left ear",
+        Code: "H66.92",
+        Score: "38%",
+      },
+    ],
   },
 
   {
-    "term": "DM2",
-    "mappings": [
+    term: "DM2",
+    mappings: [
       {
-        "Level": "4",
-        "Name": "Type 2 diabetes mellitus without complications",
-        "Code": "E11.9",
-        "Score": "98%"
+        Level: "4",
+        Name: "Type 2 diabetes mellitus without complications",
+        Code: "E11.9",
+        Score: "98%",
       },
       {
-        "Level": "4",
-        "Name": "Type 2 diabetes mellitus with unspecified complications",
-        "Code": "E11.8",
-        "Score": "58%"
+        Level: "4",
+        Name: "Type 2 diabetes mellitus with unspecified complications",
+        Code: "E11.8",
+        Score: "58%",
       },
       {
-        "Level": "5",
-        "Name": "Type 2 diabetes mellitus with other specified complication",
-        "Code": "E11.69",
-        "Score": "42%"
-      }      
-    ]
-  }
-]
-
+        Level: "5",
+        Name: "Type 2 diabetes mellitus with other specified complication",
+        Code: "E11.69",
+        Score: "42%",
+      },
+    ],
+  },
+];
 
 const ICD10CM = () => {
-  return (
-    <EncApp />
-  )
-}
+  return <EncApp terms={terms} />;
+};
 
-export default ICD10CM
+export default ICD10CM;
