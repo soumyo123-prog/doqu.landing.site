@@ -131,8 +131,11 @@ export default function MeddraEncoderPage({ terms }) {
               </div>
             </form>
           </div>
-          {activeTerm && (
-            <div className="bg-white border-theme rounded mt-2">
+          <div
+            className="bg-white border-theme rounded mt-2"
+            style={{ height: "calc(100vh - 15.5rem)", overflow: "auto" }}
+          >
+            {activeTerm ? (
               <div className="w-full h-full overflow-auto relative">
                 <table className="enc-table">
                   <thead>
@@ -154,49 +157,6 @@ export default function MeddraEncoderPage({ terms }) {
                     ))}
                   </tbody>
                 </table>
-              </div>
-            </div>
-          )}
-          <div
-            className="bg-white border-theme rounded mt-2"
-            style={{ height: "calc(100vh - 15.5rem)" }}
-          >
-            {Object.keys(predictions).length > 0 ? (
-              <div className="w-full h-full overflow-auto relative">
-                <div className="text-desc py-1 px-2">
-                  Recommendations for:{" "}
-                  <span className="font-medium">{activeTerm}</span>
-                </div>
-                <table className="enc-table">
-                  <thead>
-                    <tr>
-                      {predictions.column_names.map((column_name) => (
-                        <th key={column_name}>{column_name}</th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {predictions.records.map((record, index) => (
-                      <tr key={index}>
-                        {record.record_data.map((data) => (
-                          <td
-                            key={data.column_name}
-                            dangerouslySetInnerHTML={{
-                              __html: data.column_value,
-                            }}
-                          ></td>
-                        ))}
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-                <Pagination
-                  page={page}
-                  setPage={setPage}
-                  lastPage={predictions.total_count / 50}
-                  size="md"
-                  isContainerWhite={true}
-                />
               </div>
             ) : (
               <div className="flex justify-center items-center text-desc h-full">
@@ -277,8 +237,11 @@ export default function MeddraEncoderPage({ terms }) {
               </div>
             </form>
           </div>
-          {activeTerm && (
-            <div className="bg-white border-theme rounded mt-2">
+          <div
+            className="bg-white border-theme rounded mt-2"
+            style={{ height: "calc(100vh - 15.5rem)", overflow: "auto" }}
+          >
+            {activeTerm ? (
               <div className="w-full h-full overflow-auto relative">
                 <table className="enc-table">
                   <thead>
@@ -300,49 +263,6 @@ export default function MeddraEncoderPage({ terms }) {
                     ))}
                   </tbody>
                 </table>
-              </div>
-            </div>
-          )}
-          <div
-            className="bg-white border-theme rounded mt-2"
-            style={{ height: "calc(100vh - 15.5rem)" }}
-          >
-            {Object.keys(predictions).length > 0 ? (
-              <div className="w-full h-full overflow-auto relative">
-                <div className="text-desc py-1 px-2">
-                  Recommendations for:{" "}
-                  <span className="font-medium">{activeTerm}</span>
-                </div>
-                <table className="enc-table">
-                  <thead>
-                    <tr>
-                      {predictions.column_names.map((column_name) => (
-                        <th key={column_name}>{column_name}</th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {predictions.records.map((record, index) => (
-                      <tr key={index}>
-                        {record.record_data.map((data) => (
-                          <td
-                            key={data.column_name}
-                            dangerouslySetInnerHTML={{
-                              __html: data.column_value,
-                            }}
-                          ></td>
-                        ))}
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-                <Pagination
-                  page={page}
-                  setPage={setPage}
-                  lastPage={predictions.total_count / 50}
-                  size="md"
-                  isContainerWhite={true}
-                />
               </div>
             ) : (
               <div className="flex justify-center items-center text-desc h-full">
