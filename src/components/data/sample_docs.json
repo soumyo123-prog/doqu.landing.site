@@ -6,7 +6,44 @@
       {
         "case_id": "case_1",
         "case_title": "sample case 1",
-        "case_description": "Pt was admitted to emergency, could not fully emote, obsrvd facial sagging and weakness. \nPt lost taste on one side of her tongue, felt pain behind their left eye and right ear."
+        "case_description": "Pt was admitted to emergency, could not fully emote, obsrvd facial sagging and weakness. \nPt lost taste on one side of her tongue, felt pain behind their left eye and right ear.",
+        "predictions": [
+          {
+            "target_ontololy": "MedDRA Codes",
+            "codes": [
+              {
+                "Code": "10015958",
+                "Title": "EYE PAIN",
+                "Level": "PT",
+                "Confidence": "98.8%"
+              },
+              {
+                "Code": "10014020",
+                "Title": "EAR PAIN",
+                "Level": "PT",
+                "Confidence": "97.6%"
+              },          
+              {
+                "Code": "10016062",
+                "Title": "FACIAL PARALYSIS",
+                "Level": "PT",
+                "Confidence": "97.1%"
+              },
+              {
+                "Code": "10003549",
+                "Title": "ASTHENIA",
+                "Level": "PT",
+                "Confidence": "92.3%"
+              },
+              {
+                "Code": "10001480",
+                "Title": "AGEUSIA",
+                "Level": "PT",
+                "Confidence": "89.9%"
+              }
+            ]
+          }          
+        ]
       }
     ]
   },
@@ -17,12 +54,87 @@
       {
         "case_id": "case_1",
         "case_title": "sample case 1",
-        "case_description": "A patient was hospitalized due to potential colon carcinoma. \nAn exploratory laparotomy was conducted, revealing a prominent mass in the sigmoid colon. This section of the colon was then removed, and an end-to-end anastomosis was completed. During the operation, tiny nodules were observed on the liver, prompting a needle biopsy. The subsequent pathology report verified the diagnosis as adenocarcinoma of the sigmoid colon with liver metastasis."
+        "case_description": "A patient was hospitalized due to potential colon carcinoma. \nAn exploratory laparotomy was conducted, revealing a prominent mass in the sigmoid colon. This section of the colon was then removed, and an end-to-end anastomosis was completed. During the operation, tiny nodules were observed on the liver, prompting a needle biopsy. The subsequent pathology report verified the diagnosis as adenocarcinoma of the sigmoid colon with liver metastasis.",
+        "predictions": [
+          {
+            "target_ontololy": "ICD-10-CM",
+            "codes": [
+              {
+                "Code": "C18.7",
+                "Title": "Malignant neoplasm of sigmoid colon",
+                "Level": "4",
+                "Confidence": "93.4%"
+              },
+              {
+                "Code": "C78.7",
+                "Title": "Secondary malignant neoplasm of liver and intrahepatic bile duct",
+                "Level": "88.4%",
+                "Confidence": ""
+              }              
+            ]
+          },
+          {
+            "target_ontololy": "ICD-10-PCS",
+            "codes": [
+              {
+                "Code": "0DTN0ZZ",
+                "Title": "Resection of sigmoid colon, open approach",
+                "Confidence": "74.4%"
+              },
+              {
+                "Code": "0FB00ZX",
+                "Title": "Excision of liver, open approach, diagnostic",
+                "Confidence": "69.6%"
+              }
+            ]
+          }
+        ]
       },
       {
         "case_id": "case_2",
         "case_title": "sample case 2",
-        "case_description": "A patient who had undergone prostate surgery was released with a urethral catheter still inserted. He was later readmitted because of urinary sepsis caused by methicillin-resistant Staphylococcus aureus (MRSA), linked to the catheter. The doctor validated the sepsis diagnosis resulting from MRSA. The catheter was taken out, and the patient was initiated on antibiotics. After showing considerable improvement over a few days, the patient was sent home without a catheter."
+        "case_description": "A patient who had undergone prostate surgery was released with a urethral catheter still inserted. He was later readmitted because of urinary sepsis caused by methicillin-resistant Staphylococcus aureus (MRSA), linked to the catheter. The doctor validated the sepsis diagnosis resulting from MRSA. The catheter was taken out, and the patient was initiated on antibiotics. After showing considerable improvement over a few days, the patient was sent home without a catheter.",
+        "predictions": [
+          {
+            "target_ontololy": "ICD-10-CM",
+            "codes": [
+              {
+                "Code": "T83.511A",
+                "Title": "Urinary sepsis due to indwelling urethral catheter, initial encounter",
+                "Level": "7",
+                "Confidence": "92.4%"
+              },
+              {
+                "Code": "A41.02",
+                "Title": "Sepsis due to Methicillin resistant Staphylococcus aureus",
+                "Level": "5",
+                "Confidence": "83.2%"
+              },
+              {
+                "Code": "N39.0",
+                "Title": "Urinary tract infection, site not specified",
+                "Level": "4",
+                "Confidence": "81.4%"
+              },
+              {
+                "Code": "Y84.6",
+                "Title": "Urinary catheterization as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure",
+                "Level": "4",
+                "Confidence": "80.0%"
+              }
+            ]
+          },
+          {
+            "target_ontololy": "ICD-10-PCS",
+            "codes": [
+              {
+                "Code": "0TPDX0Z",
+                "Title": "Removal of drainage device from urethra, external approach",
+                "Confidence": "93.4%"
+              }              
+            ]
+          }
+        ]
       }
     ]
   },
@@ -33,7 +145,48 @@
       {
         "case_id": "case_1",
         "case_title": "sample case 1",
-        "case_description": "PREOPERATIVE DIAGNOSIS: \nPrior history of polyps in the colon.\nPersistent constipation.\n\nPOSTOPERATIVE DIAGNOSIS:\n\nPresence of a single colon polyp.\nMinor diverticulosis in the sigmoid colon.\nPERFORMED PROCEDURE:\nColonoscopy accompanied by a biopsy.\n\nANESTHESIA:\nSupervision under anesthesia care.\n\nBLOOD LOSS ESTIMATION:\nInsignificant.\n\nCOMPLICATIONS:\nNone observed.\n\nCOLLECTED SPECIMEN:\nPolyp located at the 20 cm mark.\n\nREASON FOR PROCEDURE:\nA 68-year-old male, previously diagnosed with polyps and recent increased constipation, sought further assessment.\n\nPROCEDURE DETAILS:\nAfter informed consent was secured and the procedure's risks, benefits, and other options were discussed, the patient was prepped in the endoscopy room and positioned on his left side. Anesthesia care was administered. Once sedation reached desired levels, a manual rectal examination was done, revealing no detectable masses or external rectal issues. A lubricated endoscope was smoothly inserted and directed up to the cecum, confirmed by spotting the ileocecal valve and the opening to the appendix. A thorough check of the ascending, transverse, and descending parts of the colon was conducted in a reverse and encompassing manner. A singular small polyp was identified in the sigmoid colon and was safely excised using a cold biopsy technique. Additionally, slight diverticulosis was observed in the sigmoid region. No other irregularities were seen. A backward view within the rectal chamber disclosed no inner anomalies of the anal passage. Following the examination, the endoscope was carefully removed and the patient was moved to recovery."
+        "case_description": "PREOPERATIVE DIAGNOSIS: \nPrior history of polyps in the colon.\nPersistent constipation.\n\nPOSTOPERATIVE DIAGNOSIS:\n\nPresence of a single colon polyp.\nMinor diverticulosis in the sigmoid colon.\nPERFORMED PROCEDURE:\nColonoscopy accompanied by a biopsy.\n\nANESTHESIA:\nSupervision under anesthesia care.\n\nBLOOD LOSS ESTIMATION:\nInsignificant.\n\nCOMPLICATIONS:\nNone observed.\n\nCOLLECTED SPECIMEN:\nPolyp located at the 20 cm mark.\n\nREASON FOR PROCEDURE:\nA 70-year-old male, previously diagnosed with polyps and recent increased constipation, sought further assessment.\n\nPROCEDURE DETAILS:\nAfter informed consent was secured and the procedure's risks, benefits, and other options were discussed, the patient was prepped in the endoscopy room and positioned on his left side. Anesthesia care was administered. Once sedation reached desired levels, a manual rectal examination was done, revealing no detectable masses or external rectal issues. A lubricated endoscope was smoothly inserted and directed up to the cecum, confirmed by spotting the ileocecal valve and the opening to the appendix. A thorough check of the ascending, transverse, and descending parts of the colon was conducted in a reverse and encompassing manner. A singular small polyp was identified in the sigmoid colon and was safely excised using a cold biopsy technique. Additionally, slight diverticulosis was observed in the sigmoid region. No other irregularities were seen. A backward view within the rectal chamber disclosed no inner anomalies of the anal passage. Following the examination, the endoscope was carefully removed and the patient was moved to recovery.",
+        "predictions": [
+          {
+            "target_ontololy": "ICD-10-CM",
+            "codes": [              
+              {
+                "Code": "Z86.010",
+                "Title": "Personal history of colonic polyps",
+                "Level": "6",
+                "Confidence": "90.3%"
+              },
+              {
+                "Code": "K63.5",
+                "Title": "Polyp of colon",
+                "Level": "",
+                "Confidence": "89.1%"
+              },
+              {
+                "Code": "K57.30",
+                "Title": "Diverticulosis of large intestine without perforation or abscess without bleeding",
+                "Level": "",
+                "Confidence": "83.5%"
+              },
+              {
+                "Code": "Z12.11",
+                "Title": "Encounter for screening for malignant neoplasm of colon",
+                "Level": "5",
+                "Confidence": "78.0%"
+              }
+            ]
+          },
+          {
+            "target_ontololy": "CPT",
+            "codes": [
+              {
+                "Code": "45380",
+                "Title": "COLONOSCOPY, FLEXIBLE; WITH BIOPSY, SINGLE OR MULTIPLE",
+                "Confidence": "94.4%"
+              }              
+            ]
+          }
+        ]
       }
     ]
   },
@@ -44,7 +197,29 @@
       {
         "case_id": "case_1",
         "case_title": "sample case 1",
-        "case_description": "Reason for Admission:\n\nAcute exacerbation of congestive heart failure.\nDiagnoses:\n\nCongestive heart failure.\nType 2 diabetes mellitus.\nHypertension.\nMedications on Discharge:\n\nFurosemide 40 mg daily.\nMetformin 500 mg twice daily.\nLisinopril 10 mg daily.\nRecommendations:\n\nFollow up with primary care physician in one week.\nMonitor blood glucose levels daily and report any significant changes.\nRestrict sodium intake and maintain a low-salt diet.\nBegin cardiac rehabilitation as recommended."
+        "case_description": "Reason for Admission:\n\nAcute exacerbation of congestive heart failure.\nDiagnoses:\n\nCongestive heart failure.\nType 2 diabetes mellitus.\nHypertension.\nMedications on Discharge:\n\nFurosemide 40 mg daily.\nMetformin 500 mg twice daily.\nLisinopril 10 mg daily.\nRecommendations:\n\nFollow up with primary care physician in one week.\nMonitor blood glucose levels daily and report any significant changes.\nRestrict sodium intake and maintain a low-salt diet.\nBegin cardiac rehabilitation as recommended.",
+        "predictions": [
+          {
+            "target_ontololy": "ATC ",
+            "codes": [
+              {
+                "Code": "C03CA01",
+                "Title": "Furosemide",
+                "Confidence": "97.1%"
+              },
+              {
+                "Code": "A10BA02",
+                "Title": "Metformin",
+                "Confidence": "96.9%"
+              },
+              {
+                "Code": "C09AA03",
+                "Title": "Lisinopril",
+                "Confidence": "91.2%"
+              }
+            ]
+          }
+        ]
       }
     ]
   }
