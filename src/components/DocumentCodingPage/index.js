@@ -179,34 +179,49 @@ export default function DocumentCodingPage({ encoderIndex }) {
               Extract
             </button>
           </div>
-          <div className="w-full bg-white border-theme rounded">
+          <div
+            className="w-full bg-white border-theme rounded p-2"
+            style={{ minHeight: "200px", overflow: "auto" }}
+          >
             {predictions === null ? (
-              <div
-                className="flex justify-center items-center text-desc"
-                style={{ minHeight: "200px" }}
-              >
-                AI predicted codes will be displayed here
-              </div>
+              loading === true ? (
+                <div className="flex justify-center items-center text-desc h-full">
+                  <div className="w-12 h-12 rounded-full absolute border-4 border-solid border-gray-200"></div>
+                  <div className="w-12 h-12 rounded-full animate-spin absolute border-4 border-solid border-green-500 border-t-transparent"></div>
+                </div>
+              ) : (
+                <div className="flex justify-center items-center text-desc h-full">
+                  AI predicted codes will be displayed here
+                </div>
+              )
             ) : (
-              <table className="enc-table">
-                <thead>
-                  <tr>
-                    <th>Code Title</th>
-                    <th>Code</th>
-                    <th>Score</th>
-                  </tr>
-                </thead>
-                {/* <tbody>
-                  {predictions &&
-                    predictions.codes.map((code) => (
-                      <tr key={code.code}>
-                        <td>{code.code_title}</td>
-                        <td>{code.code}</td>
-                        <td>{code.score}</td>
+              <>
+                {predictions.map((prediction) => (
+                  <table className="enc-table" key={prediction.target_ontololy}>
+                    <thead>
+                      <tr>
+                        <th colSpan={Object.keys(prediction.codes[0]).length}>
+                          {prediction.target_ontololy}
+                        </th>
                       </tr>
-                    ))}
-                </tbody> */}
-              </table>
+                      <tr>
+                        {Object.keys(prediction.codes[0]).map((key) => (
+                          <th key={key}>{key}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {prediction.codes.map((code) => (
+                        <tr key={code.Code}>
+                          {Object.values(code).map((value, index) => (
+                            <td key={index}>{value}</td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                ))}
+              </>
             )}
           </div>
         </div>
