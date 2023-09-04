@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import styles from "./styles.module.css";
 
 const BannerVideoDesktop = () => {
   const [activeModule, setActiveModule] = useState(0);
 
-  const moduleList = [
+  let moduleList = [
     {
       title: "Medical Term Coding",
       url: "https://landing-site-resources.einmind.com/demo-desktop-term-coding-compressed.mp4",
@@ -14,6 +14,19 @@ const BannerVideoDesktop = () => {
       url: "https://landing-site-resources.einmind.com/demo-desktop-document-extraction-compressed.mp4",
     },
   ];
+  if (window.innerWidth >= 1440) {
+    moduleList = [
+      {
+        title: "Medical Term Coding",
+        url: "https://landing-site-resources.einmind.com/demo-desktop-term-coding.mp4",
+      },
+      {
+        title: "Document Extraction",
+        url: "https://landing-site-resources.einmind.com/demo-desktop-document-extraction.mp4",
+      },
+    ];
+  }
+
   const tabModList = useRef(null);
   return (
     <>

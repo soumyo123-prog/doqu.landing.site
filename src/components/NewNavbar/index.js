@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./styles.module.css";
-import logo from "../NavBar/favicon.ico";
 import { useState } from "react";
 import { useRef } from "react";
 import { FaAngleDown } from "react-icons/fa";
@@ -44,14 +43,7 @@ const NewNavbar = () => {
       <div className={styles.container}>
         <a href="/">
           <div className={styles.logo}>
-            <img
-              className={styles.logo_img}
-              src={logo}
-              alt="EinMind"
-              width={30}
-              height={30}
-            />
-            <div className={styles.logo_text}>EinMind</div>
+            <div className={styles.logo_text}>einmind</div>
           </div>
         </a>
         <ul className={`${styles.list}`}>

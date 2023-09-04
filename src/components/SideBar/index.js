@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "./styles.module.css";
 import { GrClose } from "react-icons/gr";
 import { FaAngleRight, FaAngleLeft, FaMapMarkerAlt } from "react-icons/fa";
-import logo from "../NavBar/favicon.ico";
 import { medicalTermCodingMenuData } from "../MedicalTermCodingMenu";
 import { documentExtractionMenuData } from "../DocumentExtractionMenu";
 import { BsStars } from "react-icons/bs";
@@ -114,8 +113,7 @@ const SideBar = ({ open, closeSidebar }) => {
           <li>
             {!touched && (
               <div className={`py-3 flex items-center`}>
-                <img src={logo} alt="logo" className="header-logo" />
-                <h3 className="logo-text">EinMind</h3>
+                <div className={styles.logo_text}>einmind</div>
               </div>
             )}
             {touched && (
